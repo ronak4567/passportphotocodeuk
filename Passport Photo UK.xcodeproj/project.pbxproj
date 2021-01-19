@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F5E88732488CA3F0067554E /* DeliveryOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */; };
+		2F6AF5DD23A3A64700060FD5 /* ChekoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */; };
+		2F8DD207239E65DC004B0356 /* DPImageView+LettersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */; };
+		2FF18212239E356B0014563A /* MultiplePersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF18211239E356B0014563A /* MultiplePersonVC.swift */; };
+		54288624209B8DE6005152A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54288623209B8DE6005152A2 /* AppDelegate.swift */; };
+		54288629209B8DE6005152A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54288627209B8DE6005152A2 /* Main.storyboard */; };
+		5428862C209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5428862A209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld */; };
+		5428862E209B8DE8005152A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5428862D209B8DE8005152A2 /* Assets.xcassets */; };
+		54288631209B8DE8005152A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5428862F209B8DE8005152A2 /* LaunchScreen.storyboard */; };
+		5428863B209B8F74005152A2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428863A209B8F74005152A2 /* BaseViewController.swift */; };
+		5428863F209B9452005152A2 /* NrvUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428863E209B9452005152A2 /* NrvUIView.swift */; };
+		54288641209DE176005152A2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54288640209DE176005152A2 /* StartViewController.swift */; };
+		54288645209DE6AF005152A2 /* NrvUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54288644209DE6AF005152A2 /* NrvUIViewController.swift */; };
+		54288648209DE73C005152A2 /* AppFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54288647209DE73C005152A2 /* AppFunctions.swift */; };
+		5428864A209DE9BA005152A2 /* NrvUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54288649209DE9BA005152A2 /* NrvUINavigationController.swift */; };
+		5428864C209DEA2B005152A2 /* NrvUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428864B209DEA2B005152A2 /* NrvUIColor.swift */; };
+		5428864E209E1D3A005152A2 /* NrvIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428864D209E1D3A005152A2 /* NrvIcon.swift */; };
+		544395AC20A354340086A240 /* CropUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544395AB20A354340086A240 /* CropUser.swift */; };
+		544395AE20A36E020086A240 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544395AD20A36E020086A240 /* Constants.swift */; };
+		5457146A20A244EE004D888D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457146920A244EE004D888D /* HomeViewController.swift */; };
+		5457146C20A248F7004D888D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457146B20A248F7004D888D /* Utility.swift */; };
+		54D9D130209E4050004275D8 /* NrvCAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9D12F209E4050004275D8 /* NrvCAGradientLayer.swift */; };
+		54D9D136209EE0D8004275D8 /* CountryIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9D134209EE0D8004275D8 /* CountryIDCell.swift */; };
+		54D9D137209EE0D8004275D8 /* CountryIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D9D135209EE0D8004275D8 /* CountryIDCell.xib */; };
+		54D9D13C209F1F12004275D8 /* IDTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9D13A209F1F12004275D8 /* IDTypeCell.swift */; };
+		54D9D13D209F1F12004275D8 /* IDTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D9D13B209F1F12004275D8 /* IDTypeCell.xib */; };
+		54DAFA8520BDD9F900417D08 /* photoid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54DAFA8420BDD9F900417D08 /* photoid.ttf */; };
+		6351D7012182E72800C4F55C /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6351D7002182E72700C4F55C /* ImageScrollView.swift */; };
+		63DCC53F218C54AF00988902 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DCC53E218C54AF00988902 /* PreviewViewController.swift */; };
+		B152759FBD5D875C3D1909CC /* Pods_Passport_Photo_UK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4A025D6A6FB28D153F83A9 /* Pods_Passport_Photo_UK.framework */; };
+		E90E30B722928118000E347F /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E90E30B622928117000E347F /* MavenPro-Regular.ttf */; };
+		E90E30B922928191000E347F /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E90E30B822928190000E347F /* MavenPro-Medium.ttf */; };
+		E92D977E2268690E0079EAA1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D97782268690E0079EAA1 /* Address.swift */; };
+		E92D977F2268690E0079EAA1 /* SendMessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D97792268690E0079EAA1 /* SendMessageResponse.swift */; };
+		E92D97802268690E0079EAA1 /* Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D977A2268690E0079EAA1 /* Bounce.swift */; };
+		E92D97812268690E0079EAA1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D977B2268690E0079EAA1 /* Message.swift */; };
+		E92D97822268690E0079EAA1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D977C2268690E0079EAA1 /* Server.swift */; };
+		E92D97832268690E0079EAA1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D977D2268690E0079EAA1 /* Response.swift */; };
+		E92E7463225B22A700712A58 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E7461225B22A700712A58 /* MBProgressHUD.m */; };
+		E95F70A8224CAF3D00C4BE33 /* PaymentMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F70A7224CAF3D00C4BE33 /* PaymentMessageVC.swift */; };
+		F140395D20C71851008F3423 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140395C20C71851008F3423 /* TermsViewController.swift */; };
+		F140395F20C71868008F3423 /* GeneralGuidelinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140395E20C71868008F3423 /* GeneralGuidelinesViewController.swift */; };
+		F140396120C71D18008F3423 /* GoodAndBadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F140396020C71D18008F3423 /* GoodAndBadViewController.swift */; };
+		F15762D020B9749D00A086E6 /* CamearaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15762CF20B9749D00A086E6 /* CamearaController.swift */; };
+		F18E2232210BAF4900CF5BAD /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2231210BAF4900CF5BAD /* Accelerate.framework */; };
+		F18E2234210BAF5400CF5BAD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2233210BAF5400CF5BAD /* AudioToolbox.framework */; };
+		F18E2236210BAF5D00CF5BAD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2235210BAF5D00CF5BAD /* AVFoundation.framework */; };
+		F18E2238210BAF6900CF5BAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2237210BAF6900CF5BAD /* CoreLocation.framework */; };
+		F18E223A210BAF7500CF5BAD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2239210BAF7400CF5BAD /* CoreMedia.framework */; };
+		F18E223C210BAF7E00CF5BAD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E223B210BAF7E00CF5BAD /* MessageUI.framework */; };
+		F18E223E210BAF8900CF5BAD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E223D210BAF8900CF5BAD /* MobileCoreServices.framework */; };
+		F18E2240210BAF9400CF5BAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E223F210BAF9400CF5BAD /* SystemConfiguration.framework */; };
+		F18E2242210BAF9F00CF5BAD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F18E2241210BAF9F00CF5BAD /* SafariServices.framework */; };
+		F1D507B520B4B4DA000A7AD6 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D507B320B4B4D9000A7AD6 /* TakePhotoViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6399E5582177756600F02CB1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F4D33A92584D27B0045AB89 /* Passport photo code UK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Passport photo code UK.entitlements"; sourceTree = "<group>"; };
+		2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionVC.swift; sourceTree = "<group>"; };
+		2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutViewController.swift; sourceTree = "<group>"; };
+		2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DPImageView+LettersExtension.swift"; sourceTree = "<group>"; };
+		2FF18211239E356B0014563A /* MultiplePersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePersonVC.swift; sourceTree = "<group>"; };
+		332AC683D81F4B836C10E06B /* Pods-Quick & Easy Photo ID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick & Easy Photo ID.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quick & Easy Photo ID/Pods-Quick & Easy Photo ID.release.xcconfig"; sourceTree = "<group>"; };
+		498B029EB923C668C7C7AD75 /* Pods-Passport Photo UK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport Photo UK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK.debug.xcconfig"; sourceTree = "<group>"; };
+		54288620209B8DE6005152A2 /* Passport photo code UK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passport photo code UK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54288623209B8DE6005152A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54288628209B8DE6005152A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5428862B209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Quick___Easy_Photo_ID.xcdatamodel"; sourceTree = "<group>"; };
+		5428862D209B8DE8005152A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54288630209B8DE8005152A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54288632209B8DE8005152A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5428863A209B8F74005152A2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5428863E209B9452005152A2 /* NrvUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvUIView.swift; sourceTree = "<group>"; };
+		54288640209DE176005152A2 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		54288644209DE6AF005152A2 /* NrvUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvUIViewController.swift; sourceTree = "<group>"; };
+		54288647209DE73C005152A2 /* AppFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFunctions.swift; sourceTree = "<group>"; };
+		54288649209DE9BA005152A2 /* NrvUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvUINavigationController.swift; sourceTree = "<group>"; };
+		5428864B209DEA2B005152A2 /* NrvUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvUIColor.swift; sourceTree = "<group>"; };
+		5428864D209E1D3A005152A2 /* NrvIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvIcon.swift; sourceTree = "<group>"; };
+		544395AB20A354340086A240 /* CropUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropUser.swift; sourceTree = "<group>"; };
+		544395AD20A36E020086A240 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5457146920A244EE004D888D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5457146B20A248F7004D888D /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		54D9D12F209E4050004275D8 /* NrvCAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrvCAGradientLayer.swift; sourceTree = "<group>"; };
+		54D9D134209EE0D8004275D8 /* CountryIDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryIDCell.swift; sourceTree = "<group>"; };
+		54D9D135209EE0D8004275D8 /* CountryIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryIDCell.xib; sourceTree = "<group>"; };
+		54D9D13A209F1F12004275D8 /* IDTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTypeCell.swift; sourceTree = "<group>"; };
+		54D9D13B209F1F12004275D8 /* IDTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IDTypeCell.xib; sourceTree = "<group>"; };
+		54DAFA8420BDD9F900417D08 /* photoid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = photoid.ttf; sourceTree = "<group>"; };
+		6351D7002182E72700C4F55C /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		63DCC53E218C54AF00988902 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		791F74C0EF70579CA504E614 /* Pods-Passport Photo UK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport Photo UK.release.xcconfig"; path = "Pods/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK.release.xcconfig"; sourceTree = "<group>"; };
+		86C0CA8399FC67614A80B1AD /* Pods-Quick & Easy Photo ID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quick & Easy Photo ID.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quick & Easy Photo ID/Pods-Quick & Easy Photo ID.debug.xcconfig"; sourceTree = "<group>"; };
+		BA4A025D6A6FB28D153F83A9 /* Pods_Passport_Photo_UK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Passport_Photo_UK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90E30B622928117000E347F /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		E90E30B822928190000E347F /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
+		E92D97782268690E0079EAA1 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		E92D97792268690E0079EAA1 /* SendMessageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageResponse.swift; sourceTree = "<group>"; };
+		E92D977A2268690E0079EAA1 /* Bounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounce.swift; sourceTree = "<group>"; };
+		E92D977B2268690E0079EAA1 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E92D977C2268690E0079EAA1 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		E92D977D2268690E0079EAA1 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		E92E7461225B22A700712A58 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E92E7462225B22A700712A58 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E95F70A7224CAF3D00C4BE33 /* PaymentMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMessageVC.swift; sourceTree = "<group>"; };
+		F140395C20C71851008F3423 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		F140395E20C71868008F3423 /* GeneralGuidelinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralGuidelinesViewController.swift; sourceTree = "<group>"; };
+		F140396020C71D18008F3423 /* GoodAndBadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodAndBadViewController.swift; sourceTree = "<group>"; };
+		F15762CF20B9749D00A086E6 /* CamearaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamearaController.swift; sourceTree = "<group>"; };
+		F18E2212210BA91400CF5BAD /* Quick & Easy Photo ID-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quick & Easy Photo ID-Bridging-Header.h"; sourceTree = "<group>"; };
+		F18E2231210BAF4900CF5BAD /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F18E2233210BAF5400CF5BAD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F18E2235210BAF5D00CF5BAD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F18E2237210BAF6900CF5BAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F18E2239210BAF7400CF5BAD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F18E223B210BAF7E00CF5BAD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F18E223D210BAF8900CF5BAD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F18E223F210BAF9400CF5BAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F18E2241210BAF9F00CF5BAD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		F1D507B320B4B4D9000A7AD6 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5428861D209B8DE6005152A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18E2242210BAF9F00CF5BAD /* SafariServices.framework in Frameworks */,
+				F18E2240210BAF9400CF5BAD /* SystemConfiguration.framework in Frameworks */,
+				F18E223E210BAF8900CF5BAD /* MobileCoreServices.framework in Frameworks */,
+				F18E223C210BAF7E00CF5BAD /* MessageUI.framework in Frameworks */,
+				F18E223A210BAF7500CF5BAD /* CoreMedia.framework in Frameworks */,
+				F18E2238210BAF6900CF5BAD /* CoreLocation.framework in Frameworks */,
+				F18E2236210BAF5D00CF5BAD /* AVFoundation.framework in Frameworks */,
+				F18E2234210BAF5400CF5BAD /* AudioToolbox.framework in Frameworks */,
+				F18E2232210BAF4900CF5BAD /* Accelerate.framework in Frameworks */,
+				B152759FBD5D875C3D1909CC /* Pods_Passport_Photo_UK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54288617209B8DE6005152A2 = {
+			isa = PBXGroup;
+			children = (
+				54288622209B8DE6005152A2 /* Passport Photo UK */,
+				54288621209B8DE6005152A2 /* Products */,
+				BA4FF9DD23E2231955B7DE79 /* Pods */,
+				ECF62C85CF44F8A31F590497 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		54288621209B8DE6005152A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54288620209B8DE6005152A2 /* Passport photo code UK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54288622209B8DE6005152A2 /* Passport Photo UK */ = {
+			isa = PBXGroup;
+			children = (
+				2F4D33A92584D27B0045AB89 /* Passport photo code UK.entitlements */,
+				F18E2215210BAC1600CF5BAD /* Third Party */,
+				54DAFA8420BDD9F900417D08 /* photoid.ttf */,
+				E90E30B622928117000E347F /* MavenPro-Regular.ttf */,
+				E90E30B822928190000E347F /* MavenPro-Medium.ttf */,
+				E92E7460225B22A700712A58 /* MBProgressHud */,
+				54D9D131209EE089004275D8 /* Cells */,
+				54288646209DE72D005152A2 /* Common */,
+				5428863C209B9405005152A2 /* Extensions */,
+				54288639209B8E15005152A2 /* StoryBoard */,
+				54288638209B8E02005152A2 /* ViewControllers */,
+				54288623209B8DE6005152A2 /* AppDelegate.swift */,
+				5428862D209B8DE8005152A2 /* Assets.xcassets */,
+				5428862F209B8DE8005152A2 /* LaunchScreen.storyboard */,
+				54288632209B8DE8005152A2 /* Info.plist */,
+				5428862A209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld */,
+			);
+			path = "Passport Photo UK";
+			sourceTree = "<group>";
+		};
+		54288638209B8E02005152A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5428863A209B8F74005152A2 /* BaseViewController.swift */,
+				54288640209DE176005152A2 /* StartViewController.swift */,
+				F140395C20C71851008F3423 /* TermsViewController.swift */,
+				F140395E20C71868008F3423 /* GeneralGuidelinesViewController.swift */,
+				F140396020C71D18008F3423 /* GoodAndBadViewController.swift */,
+				F1D507B320B4B4D9000A7AD6 /* TakePhotoViewController.swift */,
+				63DCC53E218C54AF00988902 /* PreviewViewController.swift */,
+				2FF18211239E356B0014563A /* MultiplePersonVC.swift */,
+				2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */,
+				2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */,
+				5457146920A244EE004D888D /* HomeViewController.swift */,
+				E95F70A7224CAF3D00C4BE33 /* PaymentMessageVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		54288639209B8E15005152A2 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				54288627209B8DE6005152A2 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		5428863C209B9405005152A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				544395AA20A353FD0086A240 /* Model */,
+				5428863D209B9412005152A2 /* Others */,
+				F18E2212210BA91400CF5BAD /* Quick & Easy Photo ID-Bridging-Header.h */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5428863D209B9412005152A2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5428863E209B9452005152A2 /* NrvUIView.swift */,
+				54288644209DE6AF005152A2 /* NrvUIViewController.swift */,
+				54288649209DE9BA005152A2 /* NrvUINavigationController.swift */,
+				5428864B209DEA2B005152A2 /* NrvUIColor.swift */,
+				5428864D209E1D3A005152A2 /* NrvIcon.swift */,
+				54D9D12F209E4050004275D8 /* NrvCAGradientLayer.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		54288646209DE72D005152A2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				54288647209DE73C005152A2 /* AppFunctions.swift */,
+				5457146B20A248F7004D888D /* Utility.swift */,
+				544395AD20A36E020086A240 /* Constants.swift */,
+				F15762CF20B9749D00A086E6 /* CamearaController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		544395AA20A353FD0086A240 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				544395AB20A354340086A240 /* CropUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		54D9D131209EE089004275D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				54D9D133209EE09E004275D8 /* CollectionViewCells */,
+				54D9D132209EE093004275D8 /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		54D9D132209EE093004275D8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				54D9D134209EE0D8004275D8 /* CountryIDCell.swift */,
+				54D9D135209EE0D8004275D8 /* CountryIDCell.xib */,
+				54D9D13A209F1F12004275D8 /* IDTypeCell.swift */,
+				54D9D13B209F1F12004275D8 /* IDTypeCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		54D9D133209EE09E004275D8 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		BA4FF9DD23E2231955B7DE79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86C0CA8399FC67614A80B1AD /* Pods-Quick & Easy Photo ID.debug.xcconfig */,
+				332AC683D81F4B836C10E06B /* Pods-Quick & Easy Photo ID.release.xcconfig */,
+				498B029EB923C668C7C7AD75 /* Pods-Passport Photo UK.debug.xcconfig */,
+				791F74C0EF70579CA504E614 /* Pods-Passport Photo UK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E92D97772268690E0079EAA1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E92D97782268690E0079EAA1 /* Address.swift */,
+				E92D97792268690E0079EAA1 /* SendMessageResponse.swift */,
+				E92D977A2268690E0079EAA1 /* Bounce.swift */,
+				E92D977B2268690E0079EAA1 /* Message.swift */,
+				E92D977C2268690E0079EAA1 /* Server.swift */,
+				E92D977D2268690E0079EAA1 /* Response.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E92E7460225B22A700712A58 /* MBProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				E92E7461225B22A700712A58 /* MBProgressHUD.m */,
+				E92E7462225B22A700712A58 /* MBProgressHUD.h */,
+			);
+			path = MBProgressHud;
+			sourceTree = "<group>";
+		};
+		ECF62C85CF44F8A31F590497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F18E2241210BAF9F00CF5BAD /* SafariServices.framework */,
+				F18E223F210BAF9400CF5BAD /* SystemConfiguration.framework */,
+				F18E223D210BAF8900CF5BAD /* MobileCoreServices.framework */,
+				F18E223B210BAF7E00CF5BAD /* MessageUI.framework */,
+				F18E2239210BAF7400CF5BAD /* CoreMedia.framework */,
+				F18E2237210BAF6900CF5BAD /* CoreLocation.framework */,
+				F18E2235210BAF5D00CF5BAD /* AVFoundation.framework */,
+				F18E2233210BAF5400CF5BAD /* AudioToolbox.framework */,
+				F18E2231210BAF4900CF5BAD /* Accelerate.framework */,
+				BA4A025D6A6FB28D153F83A9 /* Pods_Passport_Photo_UK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F18E2215210BAC1600CF5BAD /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */,
+				E92D97772268690E0079EAA1 /* Sources */,
+				6351D7002182E72700C4F55C /* ImageScrollView.swift */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5428861F209B8DE6005152A2 /* Passport Photo UK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54288635209B8DE8005152A2 /* Build configuration list for PBXNativeTarget "Passport Photo UK" */;
+			buildPhases = (
+				CCF2DDD8B46F150691EB3F81 /* [CP] Check Pods Manifest.lock */,
+				5428861C209B8DE6005152A2 /* Sources */,
+				5428861D209B8DE6005152A2 /* Frameworks */,
+				5428861E209B8DE6005152A2 /* Resources */,
+				6399E5582177756600F02CB1 /* CopyFiles */,
+				6399E5592177757600F02CB1 /* ShellScript */,
+				612E7E925324DE4D08CEA28E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Passport Photo UK";
+			productName = "Quick & Easy Photo ID";
+			productReference = 54288620209B8DE6005152A2 /* Passport photo code UK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54288618209B8DE6005152A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Nirav Gondaliya";
+				TargetAttributes = {
+					5428861F209B8DE6005152A2 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = 5428861B209B8DE6005152A2 /* Build configuration list for PBXProject "Passport Photo UK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54288617209B8DE6005152A2;
+			productRefGroup = 54288621209B8DE6005152A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5428861F209B8DE6005152A2 /* Passport Photo UK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5428861E209B8DE6005152A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90E30B722928118000E347F /* MavenPro-Regular.ttf in Resources */,
+				54DAFA8520BDD9F900417D08 /* photoid.ttf in Resources */,
+				54288631209B8DE8005152A2 /* LaunchScreen.storyboard in Resources */,
+				5428862E209B8DE8005152A2 /* Assets.xcassets in Resources */,
+				54D9D13D209F1F12004275D8 /* IDTypeCell.xib in Resources */,
+				E90E30B922928191000E347F /* MavenPro-Medium.ttf in Resources */,
+				54288629209B8DE6005152A2 /* Main.storyboard in Resources */,
+				54D9D137209EE0D8004275D8 /* CountryIDCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		612E7E925324DE4D08CEA28E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6399E5592177757600F02CB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" 390f323734ba0052033e2c00ec4ffe5ab714f70a 1d04b1a1c7b1ffe2ca06077ffaa1086fd016621c598cbd756f50c68a6cbfcfda\n";
+		};
+		CCF2DDD8B46F150691EB3F81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Passport Photo UK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5428861C209B8DE6005152A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5428864C209DEA2B005152A2 /* NrvUIColor.swift in Sources */,
+				5428864A209DE9BA005152A2 /* NrvUINavigationController.swift in Sources */,
+				2F8DD207239E65DC004B0356 /* DPImageView+LettersExtension.swift in Sources */,
+				5457146C20A248F7004D888D /* Utility.swift in Sources */,
+				54D9D13C209F1F12004275D8 /* IDTypeCell.swift in Sources */,
+				E92D977F2268690E0079EAA1 /* SendMessageResponse.swift in Sources */,
+				E92E7463225B22A700712A58 /* MBProgressHUD.m in Sources */,
+				5457146A20A244EE004D888D /* HomeViewController.swift in Sources */,
+				2FF18212239E356B0014563A /* MultiplePersonVC.swift in Sources */,
+				5428862C209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld in Sources */,
+				F140395D20C71851008F3423 /* TermsViewController.swift in Sources */,
+				5428863F209B9452005152A2 /* NrvUIView.swift in Sources */,
+				E92D97812268690E0079EAA1 /* Message.swift in Sources */,
+				6351D7012182E72800C4F55C /* ImageScrollView.swift in Sources */,
+				E92D97832268690E0079EAA1 /* Response.swift in Sources */,
+				54D9D130209E4050004275D8 /* NrvCAGradientLayer.swift in Sources */,
+				63DCC53F218C54AF00988902 /* PreviewViewController.swift in Sources */,
+				5428863B209B8F74005152A2 /* BaseViewController.swift in Sources */,
+				544395AC20A354340086A240 /* CropUser.swift in Sources */,
+				5428864E209E1D3A005152A2 /* NrvIcon.swift in Sources */,
+				E92D97822268690E0079EAA1 /* Server.swift in Sources */,
+				54D9D136209EE0D8004275D8 /* CountryIDCell.swift in Sources */,
+				54288624209B8DE6005152A2 /* AppDelegate.swift in Sources */,
+				2F6AF5DD23A3A64700060FD5 /* ChekoutViewController.swift in Sources */,
+				2F5E88732488CA3F0067554E /* DeliveryOptionVC.swift in Sources */,
+				E92D97802268690E0079EAA1 /* Bounce.swift in Sources */,
+				F15762D020B9749D00A086E6 /* CamearaController.swift in Sources */,
+				544395AE20A36E020086A240 /* Constants.swift in Sources */,
+				F140395F20C71868008F3423 /* GeneralGuidelinesViewController.swift in Sources */,
+				54288645209DE6AF005152A2 /* NrvUIViewController.swift in Sources */,
+				E95F70A8224CAF3D00C4BE33 /* PaymentMessageVC.swift in Sources */,
+				E92D977E2268690E0079EAA1 /* Address.swift in Sources */,
+				F140396120C71D18008F3423 /* GoodAndBadViewController.swift in Sources */,
+				54288641209DE176005152A2 /* StartViewController.swift in Sources */,
+				54288648209DE73C005152A2 /* AppFunctions.swift in Sources */,
+				F1D507B520B4B4DA000A7AD6 /* TakePhotoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		54288627209B8DE6005152A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54288628209B8DE6005152A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5428862F209B8DE8005152A2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54288630209B8DE8005152A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54288633209B8DE8005152A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54288634209B8DE8005152A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54288636209B8DE8005152A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 498B029EB923C668C7C7AD75 /* Pods-Passport Photo UK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = N7JJL9JF4S;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Passport Photo UK/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
+				);
+				MARKETING_VERSION = 1.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Cmg\"",
+					"-framework",
+					"\"IGRPhotoTweaks\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"PKYStepper\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-lc++",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.passporthphotouk.ios;
+				PRODUCT_NAME = "Passport photo code UK";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Passport Photo UK/Extensions/Quick & Easy Photo ID-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		54288637209B8DE8005152A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 791F74C0EF70579CA504E614 /* Pods-Passport Photo UK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = N7JJL9JF4S;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Passport Photo UK/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
+					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
+				);
+				MARKETING_VERSION = 1.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Cmg\"",
+					"-framework",
+					"\"IGRPhotoTweaks\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"PKYStepper\"",
+					"-framework",
+					"\"Toast_Swift\"",
+					"-lc++",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.passporthphotouk.ios;
+				PRODUCT_NAME = "Passport photo code UK";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "Passport Photo UK/Extensions/Quick & Easy Photo ID-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5428861B209B8DE6005152A2 /* Build configuration list for PBXProject "Passport Photo UK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54288633209B8DE8005152A2 /* Debug */,
+				54288634209B8DE8005152A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54288635209B8DE8005152A2 /* Build configuration list for PBXNativeTarget "Passport Photo UK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54288636209B8DE8005152A2 /* Debug */,
+				54288637209B8DE8005152A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5428862A209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5428862B209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodel */,
+			);
+			currentVersion = 5428862B209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodel */;
+			path = "Quick___Easy_Photo_ID.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 54288618209B8DE6005152A2 /* Project object */;
+}

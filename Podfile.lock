@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (4.9.1)
+  - ANLoader (1.1.2)
+  - Cmg (1.3.0)
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - IGRPhotoTweaks (1.0.8)
+  - IQKeyboardManagerSwift (6.0.5)
+  - PKYStepper (0.0.1)
+  - Realm (4.3.1):
+    - Realm/Headers (= 4.3.1)
+  - Realm/Headers (4.3.1)
+  - RealmSwift (4.3.1):
+    - Realm (= 4.3.1)
+  - Stripe/ApplePay (7.0.1):
+    - Stripe/Core
+  - Stripe/Core (7.0.1)
+  - SVProgressHUD (2.2.5)
+  - Toast-Swift (1.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - ANLoader
+  - Cmg (~> 1.3.0)
+  - Crashlytics
+  - Fabric
+  - IGRPhotoTweaks
+  - IQKeyboardManagerSwift (~> 6.0.4)
+  - PKYStepper
+  - RealmSwift
+  - Stripe/ApplePay
+  - SVProgressHUD
+  - Toast-Swift (~> 1.3.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ANLoader
+    - Cmg
+    - Crashlytics
+    - Fabric
+    - IGRPhotoTweaks
+    - IQKeyboardManagerSwift
+    - PKYStepper
+    - Realm
+    - RealmSwift
+    - Stripe
+    - SVProgressHUD
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ANLoader: fe33ee0568e30894f7d33e7d3aafe8de4b980153
+  Cmg: 4448f97235b28e15cdbd380ed83b78baaf8c9353
+  Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
+  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
+  IGRPhotoTweaks: e348cec1dfc7afc36ff0f10115637bc3b03836fa
+  IQKeyboardManagerSwift: c14eca30f6001457d6ddf25e313f23fb6578c41c
+  PKYStepper: 8dacefbddf9fa2b6aaec2ef828b46a78daa2db7d
+  Realm: 31dc40934081ef740f60feedc46d88473cbfeb40
+  RealmSwift: b5199e9a41f67b99f51acf6874a6166f5fbe93d1
+  Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toast-Swift: 25c3d98db42dc70d9a77b5006ee000e0becb458e
+
+PODFILE CHECKSUM: c5cb7027977a56ac2f8046bb2ee77fc473eef37a
+
+COCOAPODS: 1.10.0
