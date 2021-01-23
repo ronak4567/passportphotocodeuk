@@ -13,7 +13,7 @@ import Crashlytics
 import ANLoader
 import IQKeyboardManagerSwift
 import SVProgressHUD
-
+import Stripe
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 @UIApplicationMain
@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        Braintree.setReturnURLScheme("com.aron.QuickEasyPhotoID.payments")
+        StripeAPI.defaultPublishableKey = "pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu"
         IQKeyboardManager.shared.enable = true
         Fabric.with([Crashlytics.self])
         return true

@@ -49,7 +49,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     
     let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
     //var indicator:MaterialLoadingIndicator!
-    
+
     
     
     override func viewDidLoad() {
@@ -70,13 +70,13 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         self.getAllContactFile()
         var applePayButton:PKPaymentButton!
         if #available(iOS 12.0, *) {
-            applePayButton = PKPaymentButton(paymentButtonType: .checkout, paymentButtonStyle: .black)
+            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
         } else {
             applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
         }
         applePayButton.addTarget(self, action: #selector(ChekoutViewController.tappedOnClick(_:)), for: .touchUpInside)
         let screen = UIScreen.main.bounds
-        applePayButton.frame = CGRect(x: 0, y: 0, width: screen.width-30, height: 50)
+        applePayButton.frame = CGRect(x: 0, y: 0, width: (screen.width-16)/2, height: 50)
         //        applePayButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
         applePayView.addSubview(applePayButton)
         // Do any additional setup after loading the view.
@@ -149,6 +149,17 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             applePayController?.delegate = self
             present(applePayController!, animated: true, completion: nil)
         }
+    }
+    
+    let themeViewController = ThemeViewController()
+    
+    @IBAction func tappedOnAddCard(_ sender:UIButton) {
+        let theme = themeViewController.theme.stpTheme
+        let viewController = CardFieldViewController()
+        viewController.theme = theme
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.stp_theme = theme
+        present(navigationController, animated: true, completion: nil)
     }
     
     
@@ -542,7 +553,8 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
 //        Stripe.setDefaultPublishableKey("pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu")
         
         // 3
-        STPAPIClient.shared().createToken(with: payment) {
+//        STPAPIClient.shared.createToken(with: <#T##PKPayment#>, completion: <#T##STPTokenCompletionBlock##STPTokenCompletionBlock##(STPToken?, Error?) -> Void#>)
+        STPAPIClient.shared.createToken(with: payment) {
             (token, error) -> Void in
             
             if (error != nil) {
@@ -575,7 +587,7 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
             let parameters = ["token": token?.tokenId ?? "",
                               "amount": "\(Int(round(self.total * 100)))",
                               "currency":"GBP",
-                              "description": "\(self.firstName) Passport photo code UK",
+                              "description": "\(self.firstName) PPCUK - IOS - ApplePay",
             ] as [String : String]
             
             print("BODY: \(parameters)")

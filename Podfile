@@ -15,7 +15,8 @@ target 'Passport Photo UK' do
     pod 'ANLoader'
     pod 'RealmSwift'
     pod 'SVProgressHUD'
-    pod 'Stripe/ApplePay'
+#    pod 'Stripe/ApplePay'
+    pod 'Stripe'
 #    pod 'SendGrid'
   # Pods for Quick & Easy Photo ID
 

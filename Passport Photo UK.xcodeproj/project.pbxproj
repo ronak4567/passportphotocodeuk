@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020C8FA225B6BD74009F6B6B /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C8FA125B6BD74009F6B6B /* MockAPIClient.swift */; };
+		020C8FA525B6C54A009F6B6B /* MyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C8FA425B6C54A009F6B6B /* MyAPIClient.swift */; };
+		027C3B3225BC5C58008AA4AD /* CardFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */; };
+		027C3B3525BC5EE6008AA4AD /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */; };
 		2F5E88732488CA3F0067554E /* DeliveryOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */; };
 		2F6AF5DD23A3A64700060FD5 /* ChekoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */; };
 		2F8DD207239E65DC004B0356 /* DPImageView+LettersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */; };
@@ -76,6 +80,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		020C8FA125B6BD74009F6B6B /* MockAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		020C8FA425B6C54A009F6B6B /* MyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIClient.swift; sourceTree = "<group>"; };
+		027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFieldViewController.swift; sourceTree = "<group>"; };
+		027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		2F4D33A92584D27B0045AB89 /* Passport photo code UK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Passport photo code UK.entitlements"; sourceTree = "<group>"; };
 		2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionVC.swift; sourceTree = "<group>"; };
 		2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +225,8 @@
 				2FF18211239E356B0014563A /* MultiplePersonVC.swift */,
 				2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */,
 				2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */,
+				027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */,
+				027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */,
 				5457146920A244EE004D888D /* HomeViewController.swift */,
 				E95F70A7224CAF3D00C4BE33 /* PaymentMessageVC.swift */,
 			);
@@ -353,6 +363,8 @@
 		F18E2215210BAC1600CF5BAD /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				020C8FA125B6BD74009F6B6B /* MockAPIClient.swift */,
+				020C8FA425B6C54A009F6B6B /* MyAPIClient.swift */,
 				2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */,
 				E92D97772268690E0079EAA1 /* Sources */,
 				6351D7002182E72700C4F55C /* ImageScrollView.swift */,
@@ -391,7 +403,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Nirav Gondaliya";
 				TargetAttributes = {
 					5428861F209B8DE6005152A2 = {
@@ -501,6 +513,7 @@
 				E92E7463225B22A700712A58 /* MBProgressHUD.m in Sources */,
 				5457146A20A244EE004D888D /* HomeViewController.swift in Sources */,
 				2FF18212239E356B0014563A /* MultiplePersonVC.swift in Sources */,
+				027C3B3225BC5C58008AA4AD /* CardFieldViewController.swift in Sources */,
 				5428862C209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld in Sources */,
 				F140395D20C71851008F3423 /* TermsViewController.swift in Sources */,
 				5428863F209B9452005152A2 /* NrvUIView.swift in Sources */,
@@ -521,7 +534,10 @@
 				F15762D020B9749D00A086E6 /* CamearaController.swift in Sources */,
 				544395AE20A36E020086A240 /* Constants.swift in Sources */,
 				F140395F20C71868008F3423 /* GeneralGuidelinesViewController.swift in Sources */,
+				027C3B3525BC5EE6008AA4AD /* ThemeViewController.swift in Sources */,
+				020C8FA525B6C54A009F6B6B /* MyAPIClient.swift in Sources */,
 				54288645209DE6AF005152A2 /* NrvUIViewController.swift in Sources */,
+				020C8FA225B6BD74009F6B6B /* MockAPIClient.swift in Sources */,
 				E95F70A8224CAF3D00C4BE33 /* PaymentMessageVC.swift in Sources */,
 				E92D977E2268690E0079EAA1 /* Address.swift in Sources */,
 				F140396120C71D18008F3423 /* GoodAndBadViewController.swift in Sources */,
@@ -579,6 +595,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -604,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -639,6 +656,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -658,7 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -685,7 +703,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Passport Photo UK/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -741,7 +759,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Passport Photo UK/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

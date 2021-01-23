@@ -13,9 +13,9 @@ PODS:
   - Realm/Headers (4.3.1)
   - RealmSwift (4.3.1):
     - Realm (= 4.3.1)
-  - Stripe/ApplePay (7.0.1):
-    - Stripe/Core
-  - Stripe/Core (7.0.1)
+  - Stripe (21.2.0):
+    - Stripe/Stripe3DS2 (= 21.2.0)
+  - Stripe/Stripe3DS2 (21.2.0)
   - SVProgressHUD (2.2.5)
   - Toast-Swift (1.3.0)
 
@@ -29,7 +29,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.0.4)
   - PKYStepper
   - RealmSwift
-  - Stripe/ApplePay
+  - Stripe
   - SVProgressHUD
   - Toast-Swift (~> 1.3.0)
 
@@ -60,10 +60,10 @@ SPEC CHECKSUMS:
   PKYStepper: 8dacefbddf9fa2b6aaec2ef828b46a78daa2db7d
   Realm: 31dc40934081ef740f60feedc46d88473cbfeb40
   RealmSwift: b5199e9a41f67b99f51acf6874a6166f5fbe93d1
-  Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
+  Stripe: 37f742a4815882db4454188664a3aa61793a12b1
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast-Swift: 25c3d98db42dc70d9a77b5006ee000e0becb458e
 
-PODFILE CHECKSUM: c5cb7027977a56ac2f8046bb2ee77fc473eef37a
+PODFILE CHECKSUM: fbd8d789f64d1a9baab4955cdba57df24a1a66f3
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
