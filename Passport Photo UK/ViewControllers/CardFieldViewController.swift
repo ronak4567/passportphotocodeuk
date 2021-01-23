@@ -9,7 +9,7 @@
 import UIKit
 import Stripe
 import Alamofire
-class CardFieldViewController: UIViewController {
+class CardFieldViewController: BaseViewController {
 
     let cardField = STPPaymentCardTextField()
     var theme = STPTheme.defaultTheme
@@ -100,13 +100,26 @@ class CardFieldViewController: UIViewController {
                         
 //
                         if let dictResult:[String:Any] = response.result.value as! [String : Any]? {
-                            let data = dictResult["data"] as! [String : Any]
-                            if let status = data["status"] as? String, status == "succeeded"{
-//                                self.callSendMailAPI(token?.tokenId ?? "")
-//                                completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.success, errors: nil))
+                            if let data = dictResult["data"] as? [String : Any]{
+                                if let status = data["status"] as? String, status == "succeeded"{
+                                    self.dismiss(animated: true) {
+                                        
+                                    }
+                                }else {
+                                    if let message = dictResult["Message"] as? String {
+                                        self.alert(message: message) {
+                                        }
+                                    }
+                                }
                             }else {
-//                                completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.failure, errors: nil))
+                                if let message = dictResult["Message"] as? String {
+                                    self.alert(message: message) {
+                                        
+                                    }
+                                }
+                                
                             }
+                            
                             print("Result:\(dictResult)")
                         }
                         
