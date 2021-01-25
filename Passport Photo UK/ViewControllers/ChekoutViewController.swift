@@ -27,7 +27,15 @@ class TextFieldCell:UITableViewCell {
     @IBOutlet var txtField:UITextField!
 }
 
-class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+protocol MyProtocol: class {
+    func cardPaymentSuccess(transactionID: String, success: Bool)
+}
+
+class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, MyProtocol {
+    func cardPaymentSuccess(transactionID: String, success: Bool) {
+        self.callSendMailAPI(transactionID)
+    }
+    
     
     
     @IBOutlet var tblView:UITableView!
@@ -38,7 +46,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     var pickerShipping = UIPickerView()
     var selectedShipping = ""
     var firstName = "", lastName = "", strEmail = "", strAddress1 = "", strAdddress2 = "", strCity = "", strPostal = "", strPhoneNumber = "", strCountry = ""
-    
+    var cardPaymentSuccess:Bool = false
     var arrContactList:Results<AddContact>!
     var personImage = [Data]()
     
@@ -154,12 +162,23 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     let themeViewController = ThemeViewController()
     
     @IBAction func tappedOnAddCard(_ sender:UIButton) {
-        let theme = themeViewController.theme.stpTheme
-        let viewController = CardFieldViewController()
-        viewController.theme = theme
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.navigationBar.stp_theme = theme
-        present(navigationController, animated: true, completion: nil)
+        let error = self.validateView()
+        if !error.isEmpty  {
+            let alert = UIAlertController (title: "Required", message: error, preferredStyle: .alert)
+            let btnOK = UIAlertAction (title: "OK", style: .cancel, handler: nil)
+            alert.addAction(btnOK)
+            self.present(alert, animated: true, completion: nil)
+        }else {
+            let theme = themeViewController.theme.stpTheme
+            let viewController = CardFieldViewController()
+            viewController.theme = theme
+            viewController.amount = "\(Int(round(self.total * 100)))"
+            viewController.delegate = self
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.navigationBar.stp_theme = theme
+            present(navigationController, animated: true, completion: nil)
+        }
+        
     }
     
     

@@ -13,6 +13,8 @@ class CardFieldViewController: BaseViewController {
 
     let cardField = STPPaymentCardTextField()
     var theme = STPTheme.defaultTheme
+    var amount:String = ""
+    var delegate: MyProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +65,7 @@ class CardFieldViewController: BaseViewController {
                        "Content-Type": "multipart/form-data", "Connection":"keep-alive"]
         
         let parameters = ["token": token ?? "",
-                          "amount": "\(Int(round(1 * 100)))",
+                          "amount": amount,
                           "currency":"GBP",
                           "description": "PPCUK - IOS - Card",
         ] as [String : String]
@@ -102,8 +104,8 @@ class CardFieldViewController: BaseViewController {
                         if let dictResult:[String:Any] = response.result.value as! [String : Any]? {
                             if let data = dictResult["data"] as? [String : Any]{
                                 if let status = data["status"] as? String, status == "succeeded"{
+                                    self.delegate?.cardPaymentSuccess(transactionID: data["balance_transaction"] as? String ?? "", success: true);
                                     self.dismiss(animated: true) {
-                                        
                                     }
                                 }else {
                                     if let message = dictResult["Message"] as? String {
