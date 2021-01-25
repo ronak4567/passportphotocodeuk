@@ -42,7 +42,10 @@ class CardFieldViewController: BaseViewController {
         STPAPIClient.shared.createToken(withCard: cardParams) { token, error in
                guard let token = token else {
                    // Handle the error
-                   return
+                self.alert(message: error?.localizedDescription ?? "Some error occurred. Please try again") {
+                    
+                }
+                return
                }
                let tokenID = token.tokenId
             print(tokenID);

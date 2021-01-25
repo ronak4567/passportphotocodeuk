@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        Braintree.setReturnURLScheme("com.aron.QuickEasyPhotoID.payments")
-        StripeAPI.defaultPublishableKey = "pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu"
+        StripeAPI.defaultPublishableKey = "pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ"
         IQKeyboardManager.shared.enable = true
         Fabric.with([Crashlytics.self])
         return true

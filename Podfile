@@ -11,7 +11,7 @@ target 'Passport Photo UK' do
     pod 'IQKeyboardManagerSwift', '~> 6.0.4'
     pod 'Fabric'
     pod 'Crashlytics'
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 4.9.1'
     pod 'ANLoader'
     pod 'RealmSwift'
     pod 'SVProgressHUD'
