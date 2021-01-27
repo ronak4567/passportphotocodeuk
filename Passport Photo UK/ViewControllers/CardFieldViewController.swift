@@ -18,11 +18,13 @@ class CardFieldViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Card Field"
-        view.backgroundColor = UIColor.white
+        self.title = "Payment Process"
+        self.addNavCloseBtn(withSelector: #selector(goClose))
+        
+//        view.backgroundColor = UIColor.white
         view.addSubview(cardField)
         edgesForExtendedLayout = []
-        view.backgroundColor = theme.primaryBackgroundColor
+//        view.backgroundColor = theme.primaryBackgroundColor
         cardField.backgroundColor = theme.secondaryBackgroundColor
         cardField.textColor = theme.primaryForegroundColor
         cardField.placeholderColor = theme.secondaryForegroundColor
@@ -30,11 +32,13 @@ class CardFieldViewController: BaseViewController {
 //        cardField.borderWidth = 1.0
         cardField.textErrorColor = theme.errorColor
         cardField.postalCodeEntryEnabled = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-        navigationController?.navigationBar.stp_theme = theme
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+//        navigationController?.navigationBar.stp_theme = theme
+//        let color = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
+//        self.navigationController?.navigationBar.barTintColor =  color
     }
 
-    @objc func done() {
+    @IBAction func tappedOnMakePayment() {
         let cardParams = STPCardParams()
             cardParams.number = cardField.cardNumber
         cardParams.expMonth = UInt(cardField.expirationMonth)

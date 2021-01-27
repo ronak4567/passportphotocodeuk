@@ -177,12 +177,13 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             self.present(alert, animated: true, completion: nil)
         }else {
             let theme = themeViewController.theme.stpTheme
-            let viewController = CardFieldViewController()
+//            let viewController = CardFieldViewController()
+            let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
             viewController.theme = theme
             viewController.amount = "\(Int(round(self.total * 100)))"
             viewController.delegate = self
             let navigationController = UINavigationController(rootViewController: viewController)
-            navigationController.navigationBar.stp_theme = theme
+//            navigationController.navigationBar.stp_theme = theme
             present(navigationController, animated: true, completion: nil)
         }
         
