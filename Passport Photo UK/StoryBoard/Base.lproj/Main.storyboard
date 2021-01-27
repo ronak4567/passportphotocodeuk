@@ -1622,17 +1622,25 @@ Order must be placed before 12 PM</string>
                                     <outlet property="delegate" destination="hQt-y4-EQD" id="s5N-LO-IqU"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggW-tp-oPV">
+                                <rect key="frame" x="10" y="576.5" width="134.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aU6-GJ-adR">
-                                <rect key="frame" x="8" y="607" width="359" height="50"/>
+                                <rect key="frame" x="8" y="602" width="359" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaD-6G-BNm">
                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4G-f1-SRc">
                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="50"/>
-                                                <color key="backgroundColor" systemColor="labelColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                                <state key="normal" title="Payment With Card"/>
+                                                <state key="normal" title="   Card" image="credit-card">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="roundCorner">
                                                         <real key="value" value="5"/>
@@ -1654,8 +1662,30 @@ Order must be placed before 12 PM</string>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hys-VG-M5b">
                                         <rect key="frame" x="183.5" y="0.0" width="175.5" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG7-Hs-kxb" userLabel="Apple Pay">
+                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="50"/>
+                                                <color key="backgroundColor" red="0.18823529411764706" green="0.23529411764705882" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" image="ApplePay">
+                                                    <color key="titleColor" red="0.94901960784313721" green="0.81960784313725488" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="roundCorner">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tappedOnAddCard:" destination="hQt-y4-EQD" eventType="touchUpInside" id="ejF-Oo-OTz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="zG7-Hs-kxb" secondAttribute="trailing" id="2Jt-sk-Y54"/>
+                                            <constraint firstItem="zG7-Hs-kxb" firstAttribute="top" secondItem="hys-VG-M5b" secondAttribute="top" id="3EG-84-Mu0"/>
+                                            <constraint firstItem="zG7-Hs-kxb" firstAttribute="leading" secondItem="hys-VG-M5b" secondAttribute="leading" id="Eul-Tj-QBL"/>
+                                            <constraint firstAttribute="bottom" secondItem="zG7-Hs-kxb" secondAttribute="bottom" id="bdo-qV-Uzu"/>
                                             <constraint firstAttribute="height" constant="50" id="pnY-mj-OJ7"/>
                                         </constraints>
                                     </view>
@@ -1665,16 +1695,19 @@ Order must be placed before 12 PM</string>
                         <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oyC-9V-iB2" firstAttribute="leading" secondItem="OCD-Kc-rfc" secondAttribute="leading" id="22j-XI-FlX"/>
-                            <constraint firstItem="S4k-bc-rBE" firstAttribute="top" secondItem="aU6-GJ-adR" secondAttribute="bottom" constant="10" id="3cA-1a-Yex"/>
+                            <constraint firstItem="S4k-bc-rBE" firstAttribute="top" secondItem="aU6-GJ-adR" secondAttribute="bottom" constant="15" id="3cA-1a-Yex"/>
                             <constraint firstItem="S4k-bc-rBE" firstAttribute="top" secondItem="oyC-9V-iB2" secondAttribute="bottom" constant="80" id="I1q-rS-aMV"/>
                             <constraint firstAttribute="trailing" secondItem="oyC-9V-iB2" secondAttribute="trailing" id="Nz4-hR-kzo"/>
                             <constraint firstItem="oyC-9V-iB2" firstAttribute="top" secondItem="QEt-fX-IS4" secondAttribute="bottom" id="SuX-Ye-tTc"/>
                             <constraint firstItem="aU6-GJ-adR" firstAttribute="leading" secondItem="OCD-Kc-rfc" secondAttribute="leading" constant="8" id="rVb-LQ-6rh"/>
+                            <constraint firstItem="aU6-GJ-adR" firstAttribute="top" secondItem="ggW-tp-oPV" secondAttribute="bottom" constant="5" id="sjE-0u-gjP"/>
                             <constraint firstAttribute="trailing" secondItem="aU6-GJ-adR" secondAttribute="trailing" constant="8" id="v0q-vb-W1D"/>
+                            <constraint firstItem="ggW-tp-oPV" firstAttribute="leading" secondItem="OCD-Kc-rfc" secondAttribute="leading" constant="10" id="xww-kw-rNf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="applePayView" destination="hys-VG-M5b" id="pIw-Vt-MmA"/>
+                        <outlet property="cartButton" destination="x4G-f1-SRc" id="Ep8-yG-gxd"/>
                         <outlet property="tblView" destination="oyC-9V-iB2" id="Y8t-a9-m80"/>
                     </connections>
                 </viewController>
@@ -1684,7 +1717,9 @@ Order must be placed before 12 PM</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ApplePay" width="75" height="35"/>
         <image name="background" width="524" height="952.5"/>
+        <image name="credit-card" width="30" height="30"/>
         <image name="good_bad_image" width="579" height="859"/>
         <image name="ic_flash" width="35" height="35"/>
         <image name="ic_whatsapp" width="42" height="42"/>

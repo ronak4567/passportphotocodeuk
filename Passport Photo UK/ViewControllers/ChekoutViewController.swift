@@ -57,7 +57,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     
     let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
     //var indicator:MaterialLoadingIndicator!
-
+    @IBOutlet var cartButton:UIButton!
     
     
     override func viewDidLoad() {
@@ -69,6 +69,13 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         pickerShipping.delegate = self
         pickerShipping.dataSource = self
         
+        cartButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        cartButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cartButton.layer.shadowOpacity = 1.0
+        cartButton.layer.shadowRadius = 0.0
+        cartButton.layer.masksToBounds = false
+        cartButton.layer.cornerRadius = 4.0
+        
         //        if strShippingMethod == "post" || strShippingMethod == "both" {
         //            shippingCharge = 4.99
         //        }else {
@@ -76,17 +83,17 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         //        }
         
         self.getAllContactFile()
-        var applePayButton:PKPaymentButton!
-        if #available(iOS 12.0, *) {
-            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
-        } else {
-            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
-        }
-        applePayButton.addTarget(self, action: #selector(ChekoutViewController.tappedOnClick(_:)), for: .touchUpInside)
-        let screen = UIScreen.main.bounds
-        applePayButton.frame = CGRect(x: 0, y: 0, width: (screen.width-16)/2, height: 50)
-        //        applePayButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
-        applePayView.addSubview(applePayButton)
+//        var applePayButton:PKPaymentButton!
+//        if #available(iOS 12.0, *) {
+//            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+//        } else {
+//            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+//        }
+//        applePayButton.addTarget(self, action: #selector(ChekoutViewController.tappedOnClick(_:)), for: .touchUpInside)
+//        let screen = UIScreen.main.bounds
+//        applePayButton.frame = CGRect(x: 0, y: 0, width: (screen.width-16)/2, height: 50)
+//        //        applePayButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
+//        applePayView.addSubview(applePayButton)
         // Do any additional setup after loading the view.
     }
     
