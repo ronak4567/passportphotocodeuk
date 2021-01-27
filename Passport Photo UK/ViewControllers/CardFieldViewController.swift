@@ -76,7 +76,7 @@ class CardFieldViewController: BaseViewController {
         print("BODY: \(parameters)")
         print("Header: \(headers)")
         
-               
+        appDelegate.showHud()
         upload(multipartFormData: { (multipartFormData) in
             
             
@@ -87,7 +87,7 @@ class CardFieldViewController: BaseViewController {
             }
             
         }, to: url, method: .post, headers: headers) { (encodingResult) in
-            
+            appDelegate.hideHud()
             switch encodingResult {
             case .success(let upload, _, _):
                 

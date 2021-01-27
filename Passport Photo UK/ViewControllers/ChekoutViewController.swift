@@ -51,7 +51,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     var personImage = [Data]()
     
     var trayingTimes = 0
-    var applePayButton:PKPaymentButton!
+//    var applePayButton:PKPaymentButton!
     @IBOutlet var applePayView:UIView!
     let ApplePaySwagMerchantID = "merchant.com.passporthphotouk.applepay"
     
