@@ -52,8 +52,24 @@ extension BaseViewController {
         self.navigationItem.leftBarButtonItems = [barBtn]
     }
     
+    func addNavCloseBtn(withSelector selector:Selector){
+        
+        let btn = UIButton (frame: CGRect (x: 0, y: 0, width: 35, height: 35))
+        btn.setImage(#imageLiteral(resourceName: "close"), for: .normal)
+        btn.addTarget(self, action: selector, for: .touchUpInside)
+        let barBtn = UIBarButtonItem (customView: btn)
+        
+        self.navigationItem.leftBarButtonItems = [barBtn]
+    }
+    
     @objc func goBack() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func goClose() {
+        self.dismiss(animated: true) {
+            
+        }
     }
     
     func addRightBtn(withSelector selector:Selector){
