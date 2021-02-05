@@ -180,6 +180,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
 //            let viewController = CardFieldViewController()
             let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
             viewController.theme = theme
+            viewController.firstName = self.firstName
             viewController.amount = "\(Int(round(self.total * 100)))"
             viewController.delegate = self
             let navigationController = UINavigationController(rootViewController: viewController)

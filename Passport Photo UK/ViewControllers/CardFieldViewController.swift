@@ -15,6 +15,7 @@ class CardFieldViewController: BaseViewController {
     var theme = STPTheme.defaultTheme
     var amount:String = ""
     var delegate: MyProtocol?
+    var firstName: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +45,14 @@ class CardFieldViewController: BaseViewController {
         cardParams.expMonth = UInt(cardField.expirationMonth)
         cardParams.expYear = UInt(cardField.expirationYear)
             cardParams.cvc = cardField.cvc
-        
+        appDelegate.showHud()
         STPAPIClient.shared.createToken(withCard: cardParams) { token, error in
                guard let token = token else {
                    // Handle the error
                 self.alert(message: error?.localizedDescription ?? "Some error occurred. Please try again") {
                     
                 }
+                appDelegate.hideHud()
                 return
                }
                let tokenID = token.tokenId
@@ -74,13 +76,12 @@ class CardFieldViewController: BaseViewController {
         let parameters = ["token": token ?? "",
                           "amount": amount,
                           "currency":"GBP",
-                          "description": "PPCUK - IOS - Card",
+                          "description": "\(self.firstName) PPCUK - IOS - Card",
         ] as [String : String]
         
         print("BODY: \(parameters)")
         print("Header: \(headers)")
         
-        appDelegate.showHud()
         upload(multipartFormData: { (multipartFormData) in
             
             
@@ -91,14 +92,13 @@ class CardFieldViewController: BaseViewController {
             }
             
         }, to: url, method: .post, headers: headers) { (encodingResult) in
-            appDelegate.hideHud()
             switch encodingResult {
             case .success(let upload, _, _):
                 
                 upload.validate(statusCode: 200..<600)
                 //upload.authenticate(user: user, password: password)
                 upload.responseJSON { response in
-                    
+                    appDelegate.hideHud()
                     if response.result.error != nil {
                         print(response.result.error!)
                         print("failure")
