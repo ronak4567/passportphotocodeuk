@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		027C3B3225BC5C58008AA4AD /* CardFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */; };
 		027C3B3525BC5EE6008AA4AD /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */; };
+		02E02C5425FB5D7D0012C008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02E02C5325FB5D7D0012C008 /* GoogleService-Info.plist */; };
 		2F5E88732488CA3F0067554E /* DeliveryOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */; };
 		2F6AF5DD23A3A64700060FD5 /* ChekoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */; };
 		2F8DD207239E65DC004B0356 /* DPImageView+LettersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFieldViewController.swift; sourceTree = "<group>"; };
 		027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		02E02C5325FB5D7D0012C008 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F4D33A92584D27B0045AB89 /* Passport photo code UK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Passport photo code UK.entitlements"; sourceTree = "<group>"; };
 		2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionVC.swift; sourceTree = "<group>"; };
 		2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				5428862D209B8DE8005152A2 /* Assets.xcassets */,
 				5428862F209B8DE8005152A2 /* LaunchScreen.storyboard */,
 				54288632209B8DE8005152A2 /* Info.plist */,
+				02E02C5325FB5D7D0012C008 /* GoogleService-Info.plist */,
 				5428862A209B8DE6005152A2 /* Quick___Easy_Photo_ID.xcdatamodeld */,
 			);
 			path = "Passport Photo UK";
@@ -378,8 +381,8 @@
 				5428861D209B8DE6005152A2 /* Frameworks */,
 				5428861E209B8DE6005152A2 /* Resources */,
 				6399E5582177756600F02CB1 /* CopyFiles */,
-				6399E5592177757600F02CB1 /* ShellScript */,
 				612E7E925324DE4D08CEA28E /* [CP] Embed Pods Frameworks */,
+				02E02C5725FB5E670012C008 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -431,6 +434,7 @@
 			files = (
 				E90E30B722928118000E347F /* MavenPro-Regular.ttf in Resources */,
 				54DAFA8520BDD9F900417D08 /* photoid.ttf in Resources */,
+				02E02C5425FB5D7D0012C008 /* GoogleService-Info.plist in Resources */,
 				54288631209B8DE8005152A2 /* LaunchScreen.storyboard in Resources */,
 				5428862E209B8DE8005152A2 /* Assets.xcassets in Resources */,
 				54D9D13D209F1F12004275D8 /* IDTypeCell.xib in Resources */,
@@ -443,6 +447,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02E02C5725FB5E670012C008 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		612E7E925324DE4D08CEA28E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,19 +481,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport Photo UK/Pods-Passport Photo UK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		6399E5592177757600F02CB1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\" 390f323734ba0052033e2c00ec4ffe5ab714f70a 1d04b1a1c7b1ffe2ca06077ffaa1086fd016621c598cbd756f50c68a6cbfcfda\n";
 		};
 		CCF2DDD8B46F150691EB3F81 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -686,7 +695,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
@@ -707,7 +716,7 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -743,7 +752,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -763,7 +772,7 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",

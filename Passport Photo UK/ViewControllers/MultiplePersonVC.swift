@@ -290,7 +290,7 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             if !isRedirect {
                 CropUser.shared.isCaptureMultiplePic = true
                 let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)
-                self.navigationController?.popToViewController(cropVC, animated: true);
+                self.navigationController?.pushViewController(cropVC, animated: true);
             }
             
 //            let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)

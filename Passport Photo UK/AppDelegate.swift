@@ -8,12 +8,11 @@
 
 import UIKit
 import CoreData
-import Fabric
-import Crashlytics
 import ANLoader
 import IQKeyboardManagerSwift
 import SVProgressHUD
 import Stripe
+import Firebase
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 @UIApplicationMain
@@ -28,7 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        StripeAPI.defaultPublishableKey = "pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu"
         StripeAPI.defaultPublishableKey = "pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ"
         IQKeyboardManager.shared.enable = true
-        Fabric.with([Crashlytics.self])
+        
+        FirebaseApp.configure()
+        
         return true
     }
 

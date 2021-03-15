@@ -9,14 +9,18 @@ target 'Passport Photo UK' do
     pod 'Toast-Swift', '~> 1.3.0'
     pod 'PKYStepper'
     pod 'IQKeyboardManagerSwift', '~> 6.0.4'
-    pod 'Fabric'
-    pod 'Crashlytics'
+#    pod 'Fabric'
+#    pod 'Crashlytics'
     pod 'Alamofire', '~> 4.9.1'
     pod 'ANLoader'
     pod 'RealmSwift'
     pod 'SVProgressHUD'
 #    pod 'Stripe/ApplePay'
     pod 'Stripe'
+    pod 'Firebase/Crashlytics'
+
+    # Recommended: Add the Firebase pod for Google Analytics
+    pod 'Firebase/Analytics'
 #    pod 'SendGrid'
   # Pods for Quick & Easy Photo ID
 
