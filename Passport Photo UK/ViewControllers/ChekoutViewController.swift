@@ -51,7 +51,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     var personImage = [Data]()
     
     var trayingTimes = 0
-//    var applePayButton:PKPaymentButton!
+    //    var applePayButton:PKPaymentButton!
     @IBOutlet var applePayView:UIView!
     let ApplePaySwagMerchantID = "merchant.com.passporthphotouk.applepay"
     
@@ -83,17 +83,17 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         //        }
         
         self.getAllContactFile()
-//        var applePayButton:PKPaymentButton!
-//        if #available(iOS 12.0, *) {
-//            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
-//        } else {
-//            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
-//        }
-//        applePayButton.addTarget(self, action: #selector(ChekoutViewController.tappedOnClick(_:)), for: .touchUpInside)
-//        let screen = UIScreen.main.bounds
-//        applePayButton.frame = CGRect(x: 0, y: 0, width: (screen.width-16)/2, height: 50)
-//        //        applePayButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
-//        applePayView.addSubview(applePayButton)
+        //        var applePayButton:PKPaymentButton!
+        //        if #available(iOS 12.0, *) {
+        //            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+        //        } else {
+        //            applePayButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+        //        }
+        //        applePayButton.addTarget(self, action: #selector(ChekoutViewController.tappedOnClick(_:)), for: .touchUpInside)
+        //        let screen = UIScreen.main.bounds
+        //        applePayButton.frame = CGRect(x: 0, y: 0, width: (screen.width-16)/2, height: 50)
+        //        //        applePayButton.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
+        //        applePayView.addSubview(applePayButton)
         // Do any additional setup after loading the view.
     }
     
@@ -177,14 +177,14 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             self.present(alert, animated: true, completion: nil)
         }else {
             let theme = themeViewController.theme.stpTheme
-//            let viewController = CardFieldViewController()
+            //            let viewController = CardFieldViewController()
             let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
             viewController.theme = theme
             viewController.firstName = self.firstName
             viewController.amount = "\(Int(round(self.total * 100)))"
             viewController.delegate = self
             let navigationController = UINavigationController(rootViewController: viewController)
-//            navigationController.navigationBar.stp_theme = theme
+            //            navigationController.navigationBar.stp_theme = theme
             present(navigationController, animated: true, completion: nil)
         }
         
@@ -578,10 +578,10 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
     
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         Stripe.setDefaultPublishableKey("pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ")
-//        Stripe.setDefaultPublishableKey("pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu")
+        //        Stripe.setDefaultPublishableKey("pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu")
         
         // 3
-//        STPAPIClient.shared.createToken(with: <#T##PKPayment#>, completion: <#T##STPTokenCompletionBlock##STPTokenCompletionBlock##(STPToken?, Error?) -> Void#>)
+        //        STPAPIClient.shared.createToken(with: <#T##PKPayment#>, completion: <#T##STPTokenCompletionBlock##STPTokenCompletionBlock##(STPToken?, Error?) -> Void#>)
         STPAPIClient.shared.createToken(with: payment) {
             (token, error) -> Void in
             
@@ -652,16 +652,24 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
                             print("success")
                             
                             
-//
+                            //
                             if let dictResult:[String:Any] = response.result.value as! [String : Any]? {
-                                let data = dictResult["data"] as! [String : Any]
-                                if let status = data["status"] as? String, status == "succeeded"{
-                                    self.callSendMailAPI(token?.tokenId ?? "")
-                                    completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.success, errors: nil))
+                                if let data = dictResult["data"] as? [String : Any]{
+                                    if let status = data["status"] as? String, status == "succeeded"{
+                                        self.callSendMailAPI(token?.tokenId ?? "")
+                                        Analytics.logEvent(AnalyticsEventPurchase, parameters: [AnalyticsParameterItemName:"Payment Success Apple", AnalyticsParameterItemID : self.firstName])
+                                        completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.success, errors: nil))
+                                    }else {
+                                        Analytics.logEvent(AnalyticsEventPurchase, parameters: [AnalyticsParameterItemName:"Payment Fail Apple", AnalyticsParameterItemID : self.firstName])
+                                        completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.failure, errors: nil))
+                                    }
                                 }else {
+                                    Analytics.logEvent(AnalyticsEventPurchase, parameters: [AnalyticsParameterItemName:"Payment Fail Apple Data Invalid", AnalyticsParameterItemID : self.firstName])
                                     completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.failure, errors: nil))
                                 }
-                                print("Result:\(dictResult)")
+                            }else {
+                                Analytics.logEvent(AnalyticsEventPurchase, parameters: [AnalyticsParameterItemName:"Payment Fail Apple JSON Invalid", AnalyticsParameterItemID : self.firstName])
+                                completion(PKPaymentAuthorizationResult(status: PKPaymentAuthorizationStatus.failure, errors: nil))
                             }
                             
                         }

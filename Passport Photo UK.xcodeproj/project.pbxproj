@@ -695,7 +695,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
@@ -716,7 +716,7 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -752,7 +752,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -772,7 +772,7 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
