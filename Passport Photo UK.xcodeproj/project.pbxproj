@@ -10,6 +10,9 @@
 		027C3B3225BC5C58008AA4AD /* CardFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */; };
 		027C3B3525BC5EE6008AA4AD /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */; };
 		02E02C5425FB5D7D0012C008 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02E02C5325FB5D7D0012C008 /* GoogleService-Info.plist */; };
+		2F37518026AB016A0053F135 /* SelectCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F37517E26AB01690053F135 /* SelectCountryVC.swift */; };
+		2F37518126AB016A0053F135 /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F37517F26AB016A0053F135 /* CountryListVC.swift */; };
+		2F37519E26AB09B00053F135 /* country_dimensions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F37519D26AB09B00053F135 /* country_dimensions.json */; };
 		2F5E88732488CA3F0067554E /* DeliveryOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */; };
 		2F6AF5DD23A3A64700060FD5 /* ChekoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */; };
 		2F8DD207239E65DC004B0356 /* DPImageView+LettersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8DD206239E65DC004B0356 /* DPImageView+LettersExtension.swift */; };
@@ -82,6 +85,9 @@
 		027C3B3125BC5C58008AA4AD /* CardFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFieldViewController.swift; sourceTree = "<group>"; };
 		027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		02E02C5325FB5D7D0012C008 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F37517E26AB01690053F135 /* SelectCountryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryVC.swift; sourceTree = "<group>"; };
+		2F37517F26AB016A0053F135 /* CountryListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
+		2F37519D26AB09B00053F135 /* country_dimensions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_dimensions.json; sourceTree = "<group>"; };
 		2F4D33A92584D27B0045AB89 /* Passport photo code UK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Passport photo code UK.entitlements"; sourceTree = "<group>"; };
 		2F5E88722488CA3F0067554E /* DeliveryOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOptionVC.swift; sourceTree = "<group>"; };
 		2F6AF5DC23A3A64700060FD5 /* ChekoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekoutViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 				54DAFA8420BDD9F900417D08 /* photoid.ttf */,
 				E90E30B622928117000E347F /* MavenPro-Regular.ttf */,
 				E90E30B822928190000E347F /* MavenPro-Medium.ttf */,
+				2F37519D26AB09B00053F135 /* country_dimensions.json */,
 				E92E7460225B22A700712A58 /* MBProgressHud */,
 				54D9D131209EE089004275D8 /* Cells */,
 				54288646209DE72D005152A2 /* Common */,
@@ -228,6 +235,8 @@
 				027C3B3425BC5EE6008AA4AD /* ThemeViewController.swift */,
 				5457146920A244EE004D888D /* HomeViewController.swift */,
 				E95F70A7224CAF3D00C4BE33 /* PaymentMessageVC.swift */,
+				2F37517F26AB016A0053F135 /* CountryListVC.swift */,
+				2F37517E26AB01690053F135 /* SelectCountryVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -433,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90E30B722928118000E347F /* MavenPro-Regular.ttf in Resources */,
+				2F37519E26AB09B00053F135 /* country_dimensions.json in Resources */,
 				54DAFA8520BDD9F900417D08 /* photoid.ttf in Resources */,
 				02E02C5425FB5D7D0012C008 /* GoogleService-Info.plist in Resources */,
 				54288631209B8DE8005152A2 /* LaunchScreen.storyboard in Resources */,
@@ -541,10 +551,12 @@
 				54288645209DE6AF005152A2 /* NrvUIViewController.swift in Sources */,
 				E95F70A8224CAF3D00C4BE33 /* PaymentMessageVC.swift in Sources */,
 				E92D977E2268690E0079EAA1 /* Address.swift in Sources */,
+				2F37518026AB016A0053F135 /* SelectCountryVC.swift in Sources */,
 				F140396120C71D18008F3423 /* GoodAndBadViewController.swift in Sources */,
 				54288641209DE176005152A2 /* StartViewController.swift in Sources */,
 				54288648209DE73C005152A2 /* AppFunctions.swift in Sources */,
 				F1D507B520B4B4DA000A7AD6 /* TakePhotoViewController.swift in Sources */,
+				2F37518126AB016A0053F135 /* CountryListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +707,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 48;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
@@ -716,13 +728,9 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-framework",
-					"\"Cmg\"",
-					"-framework",
-					"\"IGRPhotoTweaks\"",
 					"-framework",
 					"\"IQKeyboardManagerSwift\"",
 					"-framework",
@@ -752,7 +760,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Passport Photo UK/Passport photo code UK.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_TEAM = N7JJL9JF4S;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -772,13 +780,9 @@
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/CardIO",
 					"$(PROJECT_DIR)/Passport\\ Photo\\ UK/Third\\ Party/PayPalMobile",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-framework",
-					"\"Cmg\"",
-					"-framework",
-					"\"IGRPhotoTweaks\"",
 					"-framework",
 					"\"IQKeyboardManagerSwift\"",
 					"-framework",

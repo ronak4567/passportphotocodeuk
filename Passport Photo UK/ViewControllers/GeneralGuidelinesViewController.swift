@@ -38,14 +38,16 @@ class GeneralGuidelinesViewController: BaseViewController {
         
         CropUser.shared.ratio = "25:35"
         CropUser.shared.isRedictToCodeGen = true
-        let goodBadVc = GoodAndBadViewController.instantiate(fromAppStoryboard: .Main)
-        goodBadVc.selectedCountry = "UK"
-        goodBadVc.selectedType = self.selectedSize
-        goodBadVc.selectedSize = self.selectedSize
-        goodBadVc.isNavigateToAccuracy = false
-        goodBadVc.IDSize = 366
-        goodBadVc.aspectHeightHead = "17.5:24.5"
-        self.navigationController?.pushViewController(goodBadVc, animated: true)
+        let countryChoose = SelectCountryVC.instantiate(fromAppStoryboard: .Main)
+        self.navigationController?.pushViewController(countryChoose, animated: true)
+//        let goodBadVc = GoodAndBadViewController.instantiate(fromAppStoryboard: .Main)
+//        goodBadVc.selectedCountry = "UK"
+//        goodBadVc.selectedType = self.selectedSize
+//        goodBadVc.selectedSize = self.selectedSize
+//        goodBadVc.isNavigateToAccuracy = false
+//        goodBadVc.IDSize = 366
+//        goodBadVc.aspectHeightHead = "17.5:24.5"
+//        self.navigationController?.pushViewController(goodBadVc, animated: true)
         
         /*let alert = UIAlertController (title: "Code will be delivered within 2-24 hours (if your photo meets the rules).", message: "", preferredStyle: .alert)
         let btnProceed = UIAlertAction(title: "Proceed", style: .default, handler: { (alertAction) in

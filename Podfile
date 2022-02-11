@@ -4,8 +4,8 @@
 target 'Passport Photo UK' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
    use_frameworks!
-    pod 'IGRPhotoTweaks'
-    pod 'Cmg', '~> 1.3.0'
+#    pod 'IGRPhotoTweaks'
+#    pod 'Cmg', '~> 1.3.0'
     pod 'Toast-Swift', '~> 1.3.0'
     pod 'PKYStepper'
     pod 'IQKeyboardManagerSwift', '~> 6.0.4'
@@ -16,11 +16,12 @@ target 'Passport Photo UK' do
     pod 'RealmSwift'
     pod 'SVProgressHUD'
 #    pod 'Stripe/ApplePay'
-    pod 'Stripe'
+    pod 'Stripe', '~> 21.5.0' #21.1.0
     pod 'Firebase/Crashlytics'
 
     # Recommended: Add the Firebase pod for Google Analytics
     pod 'Firebase/Analytics'
+    pod 'SDWebImage', '~> 5.0'
 #    pod 'SendGrid'
   # Pods for Quick & Easy Photo ID
 

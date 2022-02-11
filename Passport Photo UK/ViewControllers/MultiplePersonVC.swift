@@ -38,9 +38,11 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet var btnEmailOption: UIButton!
     @IBOutlet var btnHomeDeliveryOption: UIButton!
     @IBOutlet var btnBothOption: UIButton!
+    @IBOutlet var btnInfo: UIButton!
     
     @IBOutlet var viewPhotocode: UIView!
     @IBOutlet var lblPhotoCodeSummery: UILabel!
+    @IBOutlet var lblPhotoCodeSummery2: UILabel!
     @IBOutlet var viewPrintedPhoto: UIView!
     @IBOutlet var lblPhotoPrintSummery: UILabel!
     @IBOutlet var viewBoth: UIView!
@@ -61,12 +63,25 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if CropUser.shared.isCountryUK {
+            btnInfo.isHidden = false
+        }else {
+            btnInfo.isHidden = true
+        }
         self.title = "Select an Option"
         
         
         self.addNavBackBtn(withSelector: #selector(goBack))
         
         self.getAllContactFile()
+        
+        if CropUser.shared.isCountryUK {
+            
+        }else {
+            btnEmailOption.setTitle("  Digital Photo", for: .normal)
+            btnBothOption.setTitle("  Digital Photo + 4 Printed Photos", for: .normal)
+        }
             
         // Do any additional setup after loading the view.
     }
@@ -87,6 +102,7 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
         if sender == btnEmailOption {
             subTotal = 4.99 * Double(arrContactList.count)
             lblPhotoCodeSummery.textColor = UIColor.white
+            lblPhotoCodeSummery2.textColor = UIColor.white
             lblPhotoPrintSummery.textColor = UIColor.darkGray
             viewPhotocode.backgroundColor = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
             viewPrintedPhoto.backgroundColor = UIColor.white
@@ -96,6 +112,7 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             btnHomeDeliveryOption.isSelected = false
         }else if sender == btnHomeDeliveryOption {
             lblPhotoCodeSummery.textColor = UIColor.darkGray
+            lblPhotoCodeSummery2.textColor = UIColor.darkGray
             lblPhotoPrintSummery.textColor = UIColor.white
             viewPhotocode.backgroundColor = UIColor.white
             viewPrintedPhoto.backgroundColor = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
@@ -106,6 +123,7 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             btnHomeDeliveryOption.isSelected = true
         }else if sender == btnBothOption {
             lblPhotoCodeSummery.textColor = UIColor.darkGray
+            lblPhotoCodeSummery2.textColor = UIColor.darkGray
             lblPhotoPrintSummery.textColor = UIColor.darkGray
             viewPhotocode.backgroundColor = UIColor.white
             viewPrintedPhoto.backgroundColor = UIColor.white
@@ -152,20 +170,20 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
                 self.present(alert, animated: true, completion: nil)
             }else {
                 if (shipMethod == "email"){
-                    let alert = UIAlertController (title: "Code will be delivered within 24 hours (if your photo meets the rules).", message: "", preferredStyle: .alert)
-                    let btnProceed = UIAlertAction(title: "Proceed", style: .default, handler: { (alertAction) in
+//                    let alert = UIAlertController (title: "Code will be delivered within 24 hours (if your photo meets the rules).", message: "", preferredStyle: .alert)
+//                    let btnProceed = UIAlertAction(title: "Proceed", style: .default, handler: { (alertAction) in
                         let chekoutVC = ChekoutViewController.instantiate(fromAppStoryboard: .Main)
                         chekoutVC.strShippingMethod = "email"
                         chekoutVC.price = Float(self.subTotal);
                         chekoutVC.selectedShipping = "0";
                         chekoutVC.shippingCharge = 0.00;
                         self.navigationController?.pushViewController(chekoutVC, animated: true)
-                    })
-                    alert.addAction(btnProceed)
-                    
-                    let btnCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                    alert.addAction(btnCancel)
-                    self.present(alert, animated: true, completion: nil)
+//                    })
+//                    alert.addAction(btnProceed)
+//                    
+//                    let btnCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//                    alert.addAction(btnCancel)
+//                    self.present(alert, animated: true, completion: nil)
                 }else {
                     let deliveryVC = DeliveryOptionVC.instantiate(fromAppStoryboard: .Main)
                     deliveryVC.strShippingMethod = shipMethod

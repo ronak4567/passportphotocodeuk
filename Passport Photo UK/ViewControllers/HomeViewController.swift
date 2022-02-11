@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import IGRPhotoTweaks
+//import IGRPhotoTweaks
 import Toast_Swift
 import MessageUI
 import Alamofire
@@ -295,7 +295,7 @@ class HomeViewController: BaseViewController , MFMailComposeViewControllerDelega
         let headers = ["Authorization": "Basic \(base64Credentials)","Content-Type":"application/json"]
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let strURL = "http://passportphotocodeuk.com/backend/api/orders/sendMail"
+        let strURL = "https://passportphotocodeuk.com/backend/api/orders/sendMail"
         var parameters = [String : String]()
         parameters["paypal_transaction_id"] = paymentId
         parameters["transaction_date"] = dateFormatter.string(from: Date())

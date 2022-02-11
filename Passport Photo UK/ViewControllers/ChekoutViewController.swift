@@ -11,6 +11,8 @@ import Alamofire
 import RealmSwift
 import PassKit
 import Stripe
+import Firebase
+import FirebaseAnalytics
 class ShippingCell:UITableViewCell {
     @IBOutlet var lblTitle:UILabel!
     @IBOutlet var txtShippingType:UITextField!
@@ -122,7 +124,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             }else if self.strCity.isEmpty{
                 return "Please enter city / town"
             }else if self.strCountry.isEmpty{
-                return "Please enter country"
+                return "Please enter county"
             }else if self.strPostal.isEmpty{
                 return "Please enter post code"
             }
@@ -176,6 +178,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             alert.addAction(btnOK)
             self.present(alert, animated: true, completion: nil)
         }else {
+//            self.callSendMailAPI("test in ios")
             let theme = themeViewController.theme.stpTheme
             //            let viewController = CardFieldViewController()
             let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
@@ -288,7 +291,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
                 cell.lblTitle.text = "City / Town"
                 cell.txtField.tag = 777
             }else if indexPath.row == 7 {
-                cell.lblTitle.text = "Country"
+                cell.lblTitle.text = "County"
                 cell.txtField.tag = 888
             }else if indexPath.row == 8 {
                 cell.lblTitle.text = "Post code"
@@ -457,7 +460,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
                        "Content-Type": "multipart/form-data", "Connection":"keep-alive"]
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let strURL = "http://passportphotocodeuk.com/backend/api/orders/sendMail"
+        let strURL = "https://passportphotocodeuk.com/backend/api/orders/sendMail"
         //let strURL = "https://www.passportphotocodeuk.com/ppuk/api/orders/sendMail"
         //        let strURL = "https://passportphotouk.co.uk/ppuk/api/orders/sendMail"
         var parameters = [String : String]()
@@ -474,6 +477,18 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         parameters["cst_shipping_amount"] = "\(shippingCharge)"
         parameters["cst_shipping_type"] = "\(selectedShipping)"
         parameters["app_version"] = "2.0"
+        
+        if !CropUser.shared.isCountryUK && !CropUser.shared.countryInfo.isEmpty {
+            parameters["country"] = CropUser.shared.countryInfo["country_name"] as? String
+            parameters["background_color"] = CropUser.shared.countryInfo["country_bg_color"] as? String
+            parameters["dimensions"] = CropUser.shared.countryInfo["country_dimension_mm"] as? String == "" ? CropUser.shared.countryInfo["country_dimension_cm"] as? String : CropUser.shared.countryInfo["country_dimension_mm"] as? String
+            parameters["photo_kind"] = CropUser.shared.countryInfo["country_service_name"] as? String
+        }else{
+            parameters["country"] = ""
+            parameters["background_color"] = ""
+            parameters["dimension"] = ""
+            parameters["photo_kind"] = ""
+        }
         
         print("Parameter:",parameters)
         print("Header:",headers)
@@ -596,7 +611,7 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
             //            let shippingAddress = self.createShippingAddressFromRef(address: payment.shippingAddress)
             
             // 5
-            let url = "http://passportphotocodeuk.com/backend/api/Stripepay/Pay"
+            let url = "https://passportphotocodeuk.com/backend/api/Stripepay/Pay"
             let user = "ppcukadmin"
             let password = "Admin123#"
             let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!

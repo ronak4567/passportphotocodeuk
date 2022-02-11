@@ -65,7 +65,7 @@ class CardFieldViewController: BaseViewController {
     
     
     func createChargeAPI(token:String) {
-        let url = "http://passportphotocodeuk.com/backend/api/Stripepay/Pay"
+        let url = "https://passportphotocodeuk.com/backend/api/Stripepay/Pay"
         let user = "ppcukadmin"
         let password = "Admin123#"
         let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!

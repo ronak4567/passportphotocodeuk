@@ -51,7 +51,7 @@ class DeliveryOptionVC: BaseViewController {
             btnSpecialDelivery.isSelected = false
         }else if (sender.tag == 333){
             strDeliveryOption = "special"
-            shippingCharge = 7.50;
+            shippingCharge = 9.50;
             btnFreeDelivery.isSelected = false
             btnRecordDelivery.isSelected = false
             btnSpecialDelivery.isSelected = true
