@@ -183,17 +183,6 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             self.present(alert, animated: true, completion: nil)
         }else {
             getStripeToken()
-//            self.callSendMailAPI("test in ios")
-           /*/ let theme = themeViewController.theme.stpTheme
-            //            let viewController = CardFieldViewController()
-            let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
-            viewController.theme = theme
-            viewController.firstName = self.firstName
-            viewController.amount = "\(Int(round(self.total * 100)))"
-            viewController.delegate = self
-            let navigationController = UINavigationController(rootViewController: viewController)
-            //            navigationController.navigationBar.stp_theme = theme
-            present(navigationController, animated: true, completion: nil)*/
         }
         
     }
@@ -481,6 +470,18 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         parameters["cst_shipping_type"] = "\(selectedShipping)"
         parameters["app_version"] = "3.0"
         parameters["selected_service"] = "Passport"
+        
+        if !CropUser.shared.isCountryUK && !CropUser.shared.countryInfo.isEmpty {
+            parameters["country"] = CropUser.shared.countryInfo["country_name"] as? String
+            parameters["background_color"] = CropUser.shared.countryInfo["country_bg_color"] as? String
+            parameters["dimensions"] = CropUser.shared.countryInfo["country_dimension_mm"] as? String == "" ? CropUser.shared.countryInfo["country_dimension_cm"] as? String : CropUser.shared.countryInfo["country_dimension_mm"] as? String
+            parameters["photo_kind"] = CropUser.shared.countryInfo["country_service_name"] as? String
+        }else{
+            parameters["country"] = ""
+            parameters["background_color"] = ""
+            parameters["dimension"] = ""
+            parameters["photo_kind"] = ""
+        }
         
         if !CropUser.shared.isCountryUK && !CropUser.shared.countryInfo.isEmpty {
             parameters["country"] = CropUser.shared.countryInfo["country_name"] as? String

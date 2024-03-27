@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
   - ANLoader (1.1.2)
-  - Cmg (1.3.0)
   - Firebase/Analytics (7.1.0):
     - Firebase/Core
   - Firebase/Core (7.1.0):
@@ -79,7 +78,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
-  - IGRPhotoTweaks (1.0.8)
   - IQKeyboardManagerSwift (6.0.5)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -116,11 +114,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - ANLoader
-  - Cmg (~> 1.3.0)
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/RemoteConfig
-  - IGRPhotoTweaks
   - IQKeyboardManagerSwift (~> 6.0.4)
   - PKYStepper
   - RealmSwift
@@ -133,7 +129,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ANLoader
-    - Cmg
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -145,7 +140,6 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
-    - IGRPhotoTweaks
     - IQKeyboardManagerSwift
     - nanopb
     - PKYStepper
@@ -163,7 +157,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ANLoader: fe33ee0568e30894f7d33e7d3aafe8de4b980153
-  Cmg: 4448f97235b28e15cdbd380ed83b78baaf8c9353
   Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
   FirebaseABTesting: e66f1f80747792630d9b292966de206d5df9853b
   FirebaseAnalytics: 7f165a56dea86ddd5b8ce02af3bee982c683405c
@@ -175,7 +168,6 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 89e1a64593f968713b0506ba1b53b38a154bf9a5
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
-  IGRPhotoTweaks: e348cec1dfc7afc36ff0f10115637bc3b03836fa
   IQKeyboardManagerSwift: c14eca30f6001457d6ddf25e313f23fb6578c41c
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PKYStepper: 8dacefbddf9fa2b6aaec2ef828b46a78daa2db7d
@@ -190,6 +182,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast-Swift: 25c3d98db42dc70d9a77b5006ee000e0becb458e
 
-PODFILE CHECKSUM: 058e83e9c021eac45239e2ce3346d69f0c2dddee
+PODFILE CHECKSUM: fb8eb353bfe5315d415a24d0b9fb361f491f2df7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.2

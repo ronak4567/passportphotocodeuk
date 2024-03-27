@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import IGRPhotoTweaks
+//import IGRPhotoTweaks
 import Toast_Swift
 import MessageUI
 import Alamofire
