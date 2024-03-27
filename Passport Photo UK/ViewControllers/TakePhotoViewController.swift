@@ -178,19 +178,19 @@ class TakePhotoViewController : BaseViewController {
             return
         }
         
-//        // Add audio input.
-//        do {
-//            let audioDevice = AVCaptureDevice.default(for: .audio)
-//            let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice!)
-//            
-//            if session.canAddInput(audioDeviceInput) {
-//                session.addInput(audioDeviceInput)
-//            } else {
-//                print("Could not add audio device input to the session")
-//            }
-//        } catch {
-//            print("Could not create audio device input: \(error)")
-//        }
+        //        // Add audio input.
+        //        do {
+        //            let audioDevice = AVCaptureDevice.default(for: .audio)
+        //            let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice!)
+        //
+        //            if session.canAddInput(audioDeviceInput) {
+        //                session.addInput(audioDeviceInput)
+        //            } else {
+        //                print("Could not add audio device input to the session")
+        //            }
+        //        } catch {
+        //            print("Could not create audio device input: \(error)")
+        //        }
         
         // Add photo output.
         if session.canAddOutput(photoOutput) {
@@ -278,7 +278,7 @@ class TakePhotoViewController : BaseViewController {
                 
                 
                 self.sessionQueue.async {
-                    self.inProgressPhotoCaptureDelegates[photoCaptureProcessor.requestedPhotoSettings.uniqueID] = nil
+                    //self.inProgressPhotoCaptureDelegates[photoCaptureProcessor.requestedPhotoSettings.uniqueID] = nil
                     
                     
                     DispatchQueue.main.async {
@@ -340,7 +340,7 @@ class TakePhotoViewController : BaseViewController {
     @IBAction func btnGalleryTapped(_ sender : UIButton){
         self.openLibrary()
         //let galleryVC = self.storyboard?.instantiateViewController(withIdentifier: "CropImageViewController") as! CropImageViewController
-//        self.navigationController?.pushViewController(galleryVC, animated: true)
+        //        self.navigationController?.pushViewController(galleryVC, animated: true)
     }
     
     @IBAction func btnSettingsTapped(_ sender : UIButton){
@@ -488,7 +488,7 @@ class TakePhotoViewController : BaseViewController {
                     alertController.addAction(UIAlertAction(title: NSLocalizedString("Settings", comment: "Alert button to open Settings"),
                                                             style: .`default`,
                                                             handler: { _ in
-                                                                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+                        UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
                     }))
                     
                     self.present(alertController, animated: true, completion: nil)

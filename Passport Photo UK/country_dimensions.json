@@ -1,0 +1,1687 @@
+{
+  "country_list": [
+    {
+      "country_id": "ct_101",
+      "country_name": "Afghanistan",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*45 mm",
+      "country_dimension_cm": "(4*4.5cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/af.png"
+    },
+    {
+      "country_id": "ct_101",
+      "country_name": "Afghanistan",
+      "country_service_name": "e-Passport",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "5*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/af.png"
+    },
+    {
+      "country_id": "ct_101",
+      "country_name": "Afghanistan",
+      "country_service_name": "e-Tazkira ID",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "(3*4 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/af.png"
+    },
+    {
+      "country_id": "ct_102",
+      "country_name": "Albenia",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "4*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/al.png"
+    },
+    {
+      "country_id": "ct_103",
+      "country_name": "Algeria",
+      "country_service_name": "Passport / visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/dz.png"
+    },
+    {
+      "country_id": "ct_104",
+      "country_name": "Angola",
+      "country_service_name": "Work Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ao.png"
+    },
+    {
+      "country_id": "ct_104",
+      "country_name": "Angola",
+      "country_service_name": "Tourist e-Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ao.png"
+    },
+    {
+      "country_id": "ct_105",
+      "country_name": "Argentina",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "",
+      "country_dimension_cm": "4*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ar.png"
+    },
+    {
+      "country_id": "ct_106",
+      "country_name": "Armenia",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "(3.5*4.5 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/am.png"
+    },
+    {
+      "country_id": "ct_107",
+      "country_name": "Australia",
+      "country_service_name": "Online License",
+      "country_dimension_mm": "At least 477*636 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/au.png"
+    },
+    {
+      "country_id": "ct_107",
+      "country_name": "Australia",
+      "country_service_name": "Offline Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "(3.5*4.5 cm)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/au.png"
+    },
+    {
+      "country_id": "ct_108",
+      "country_name": "Austria",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/at.png"
+    },
+    {
+      "country_id": "ct_109",
+      "country_name": "Bahrain",
+      "country_service_name": "",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "(4*6cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bh.png"
+    },
+    {
+      "country_id": "ct_110",
+      "country_name": "Bahamas",
+      "country_service_name": "",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bs.png"
+    },
+    {
+      "country_id": "ct_111",
+      "country_name": "Bangladesh",
+      "country_service_name": "Machine Readable Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bd.png"
+    },
+    {
+      "country_id": "ct_111",
+      "country_name": "Bangladesh",
+      "country_service_name": "Passport(45*55)",
+      "country_dimension_mm": "45*55 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bd.png"
+    },
+    {
+      "country_id": "ct_111",
+      "country_name": "Bangladesh",
+      "country_service_name": "e-Visa",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bd.png"
+    },
+    {
+      "country_id": "ct_112",
+      "country_name": "Balarus",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/by.png"
+    },
+    {
+      "country_id": "ct_113",
+      "country_name": "Belgium",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "(3.5*4.5 cm)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/be.png"
+    },
+    {
+      "country_id": "ct_113",
+      "country_name": "Belgium",
+      "country_service_name": "ID,Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "(3.5*4.5 cm)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/be.png"
+    },
+    {
+      "country_id": "ct_114",
+      "country_name": "Belize",
+      "country_service_name": "ID,Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/bz.png"
+    },
+    {
+      "country_id": "ct_115",
+      "country_name": "Benin",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/bj.png"
+    },
+    {
+      "country_id": "ct_116",
+      "country_name": "Bolivia",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bo.png"
+    },
+    {
+      "country_id": "ct_117",
+      "country_name": "Bostwana",
+      "country_service_name": "",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "(3*4 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/bw.png"
+    },
+    {
+      "country_id": "ct_118",
+      "country_name": "Brazil",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/br.png"
+    },
+    {
+      "country_id": "ct_118",
+      "country_name": "Brazil",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "413*531 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/br.png"
+    },
+    {
+      "country_id": "ct_118",
+      "country_name": "Brazil",
+      "country_service_name": "3*4 cm ID Photo",
+      "country_dimension_mm": "30*40mm",
+      "country_dimension_cm": "(3*4cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/br.png"
+    },
+    {
+      "country_id": "ct_118",
+      "country_name": "Brazil",
+      "country_service_name": "Comman Passport",
+      "country_dimension_mm": "50*70mm",
+      "country_dimension_cm": "(5*7 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/br.png"
+    },
+    {
+      "country_id": "ct_119",
+      "country_name": "Bulgaria",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/bg.png"
+    },
+    {
+      "country_id": "ct_120",
+      "country_name": "Burkina Faso",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/bf.png"
+    },
+    {
+      "country_id": "ct_121",
+      "country_name": "Cambodia",
+      "country_service_name": "",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "(4*6 cm)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/kh.png"
+    },
+    {
+      "country_id": "ct_122",
+      "country_name": "Cameroon",
+      "country_service_name": "Passport(4*5 cm)",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cm.png"
+    },
+    {
+      "country_id": "ct_123",
+      "country_name": "Canada",
+      "country_service_name": "Citizenship, PR",
+      "country_dimension_mm": "50*70 mm",
+      "country_dimension_cm": "5*7 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ca.png"
+    },
+    {
+      "country_id": "ct_123",
+      "country_name": "Canada",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "50*70 mm",
+      "country_dimension_cm": "5*7 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ca.png"
+    },
+    {
+      "country_id": "ct_123",
+      "country_name": "Canada",
+      "country_service_name": "Online PR Form",
+      "country_dimension_mm": "1680*1200 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ca.png"
+    },
+    {
+      "country_id": "ct_123",
+      "country_name": "Canada",
+      "country_service_name": "Visa, Temporary Residence",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ca.png"
+    },
+    {
+      "country_id": "ct_124",
+      "country_name": "Chad",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "5*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/td.png"
+    },
+    {
+      "country_id": "ct_125",
+      "country_name": "Chile",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "5*7 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cl.png"
+    },
+    {
+      "country_id": "ct_126",
+      "country_name": "China",
+      "country_service_name": "Printed Form",
+      "country_dimension_mm": "33*48 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cn.png"
+    },
+    {
+      "country_id": "ct_127",
+      "country_name": "Colombia",
+      "country_service_name": "Citizenship",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "4*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/co.png"
+    },
+    {
+      "country_id": "ct_127",
+      "country_name": "Colombia",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/co.png"
+    },
+    {
+      "country_id": "ct_128",
+      "country_name": "Comoros",
+      "country_service_name": "",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/km.png"
+    },
+    {
+      "country_id": "ct_129",
+      "country_name": "Congo - Democratic Republic",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cd.png"
+    },
+    {
+      "country_id": "ct_130",
+      "country_name": "Congo - Brazzaville",
+      "country_service_name": "",
+      "country_dimension_mm": "40*40 mm",
+      "country_dimension_cm": "4*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cg.png"
+    },
+    {
+      "country_id": "ct_131",
+      "country_name": "Costa Rica",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cr.png"
+    },
+    {
+      "country_id": "ct_132",
+      "country_name": "Croatia",
+      "country_service_name": "ID,Visa, Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/hr.png"
+    },
+    {
+      "country_id": "ct_133",
+      "country_name": "Cuba",
+      "country_service_name": "",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 inches",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cu.png"
+    },
+    {
+      "country_id": "ct_134",
+      "country_name": "Cyprus",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cy.png"
+    },
+    {
+      "country_id": "ct_134",
+      "country_name": "Cyprus",
+      "country_service_name": "Visa, ID(35*45mm)",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/cy.png"
+    },
+    {
+      "country_id": "ct_135",
+      "country_name": "Czech Republic",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/cz.png"
+    },
+    {
+      "country_id": "ct_135",
+      "country_name": "Czech Republic",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "5*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/cz.png"
+    },
+    {
+      "country_id": "ct_136",
+      "country_name": "Denmark",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/dk.png"
+    },
+    {
+      "country_id": "ct_137",
+      "country_name": "Djibouti",
+      "country_service_name": "ID,Passport",
+      "country_dimension_mm": "35*35 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/dj.png"
+    },
+    {
+      "country_id": "ct_137",
+      "country_name": "Djibouti",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 inches",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/dj.png"
+    },
+    {
+      "country_id": "ct_138",
+      "country_name": "Dominian Republic",
+      "country_service_name": "",
+      "country_dimension_mm": "38*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/do.png"
+    },
+    {
+      "country_id": "ct_139",
+      "country_name": "Egypt",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/eg.png"
+    },
+    {
+      "country_id": "ct_139",
+      "country_name": "Egypt",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "(4*6 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/eg.png"
+    },
+    {
+      "country_id": "ct_140",
+      "country_name": "Estonia",
+      "country_service_name": "Online Digital ID and Passport Request by Email",
+      "country_dimension_mm": "1300*1600 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ee.png"
+    },
+    {
+      "country_id": "ct_140",
+      "country_name": "Estonia",
+      "country_service_name": "ID, Visa, Passport",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ee.png"
+    },
+    {
+      "country_id": "ct_140",
+      "country_name": "Estonia",
+      "country_service_name": "Long Stay Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ee.png"
+    },
+    {
+      "country_id": "ct_141",
+      "country_name": "Ecuador",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ec.png"
+    },
+    {
+      "country_id": "ct_142",
+      "country_name": "Equatorial Guinea",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/gq.png"
+    },
+    {
+      "country_id": "ct_143",
+      "country_name": "Ethopia",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "(413*531 px)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/et.png"
+    },
+    {
+      "country_id": "ct_143",
+      "country_name": "Ethopia",
+      "country_service_name": "Passport(3*4 cm)",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/et.png"
+    },
+    {
+      "country_id": "ct_144",
+      "country_name": "Fiji",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/fj.png"
+    },
+    {
+      "country_id": "ct_145",
+      "country_name": "Finland",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "36*47 mm for printing",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/fi.png"
+    },
+    {
+      "country_id": "ct_145",
+      "country_name": "Finland",
+      "country_service_name": "Online ID, Passport",
+      "country_dimension_mm": "500*653 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/fi.png"
+    },
+    {
+      "country_id": "ct_146",
+      "country_name": "France",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/fr.png"
+    },
+    {
+      "country_id": "ct_147",
+      "country_name": "Gabon",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ga.png"
+    },
+    {
+      "country_id": "ct_148",
+      "country_name": "Georgia",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ge.png"
+    },
+    {
+      "country_id": "ct_148",
+      "country_name": "Georgia",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "4*5 cm",
+      "country_dimension_cm": "(472*591 px)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ge.png"
+    },
+    {
+      "country_id": "ct_149",
+      "country_name": "Germany",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/de.png"
+    },
+    {
+      "country_id": "ct_150",
+      "country_name": "Ghana",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/gh.png"
+    },
+    {
+      "country_id": "ct_151",
+      "country_name": "Greece",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/gr.png"
+    },
+    {
+      "country_id": "ct_151",
+      "country_name": "Greece",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/gr.png"
+    },
+    {
+      "country_id": "ct_152",
+      "country_name": "Hong Kong",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "40*50 mm",
+      "country_dimension_cm": "(4*5 cm)",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/hk.png"
+    },
+    {
+      "country_id": "ct_152",
+      "country_name": "Hong Kong",
+      "country_service_name": "Online Passport",
+      "country_dimension_mm": "1200*1600 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/hk.png"
+    },
+    {
+      "country_id": "ct_153",
+      "country_name": "Hungry",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/hu.png"
+    },
+    {
+      "country_id": "ct_154",
+      "country_name": "Honduras",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/hn.png"
+    },
+    {
+      "country_id": "ct_155",
+      "country_name": "India",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/in.png"
+    },
+    {
+      "country_id": "ct_155",
+      "country_name": "India",
+      "country_service_name": "Visa, OCI Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/in.png"
+    },
+    {
+      "country_id": "ct_155",
+      "country_name": "India",
+      "country_service_name": "Birth Registration",
+      "country_dimension_mm": "35*35 mm",
+      "country_dimension_cm": "100x120 px",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/in.png"
+    },
+    {
+      "country_id": "ct_155",
+      "country_name": "India",
+      "country_service_name": "Pan Card",
+      "country_dimension_mm": "25*35 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/in.png"
+    },
+    {
+      "country_id": "ct_156",
+      "country_name": "Indonesia",
+      "country_service_name": "e-Visa, Visa, Passport",
+      "country_dimension_mm": "51*51 mm",
+      "country_dimension_cm": "2*2 in",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/id.png"
+    },
+    {
+      "country_id": "ct_156",
+      "country_name": "Indonesia",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/id.png"
+    },
+    {
+      "country_id": "ct_157",
+      "country_name": "Iran",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ir.png"
+    },
+    {
+      "country_id": "ct_157",
+      "country_name": "Iran",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "400*600 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ir.png"
+    },
+    {
+      "country_id": "ct_158",
+      "country_name": "Iraq",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/iq.png"
+    },
+    {
+      "country_id": "ct_158",
+      "country_name": "Iraq",
+      "country_service_name": "ID, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/iq.png"
+    },
+    {
+      "country_id": "ct_159",
+      "country_name": "Ireland",
+      "country_service_name": "Online Passport",
+      "country_dimension_mm": "715*951 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ie.png"
+    },
+    {
+      "country_id": "ct_159",
+      "country_name": "Ireland",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ie.png"
+    },
+    {
+      "country_id": "ct_160",
+      "country_name": "Israel",
+      "country_service_name": "ID, Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/il.png"
+    },
+    {
+      "country_id": "ct_160",
+      "country_name": "Israel",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "51*51 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/il.png"
+    },
+    {
+      "country_id": "ct_161",
+      "country_name": "Italy",
+      "country_service_name": "Passport, ID,Visa",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/it.png"
+    },
+    {
+      "country_id": "ct_162",
+      "country_name": "Ivory Coast",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/im.png"
+    },
+    {
+      "country_id": "ct_163",
+      "country_name": "Jamaica",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/jm.png"
+    },
+    {
+      "country_id": "ct_164",
+      "country_name": "Japan",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/jp.png"
+    },
+    {
+      "country_id": "ct_165",
+      "country_name": "Jordan",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/jo.png"
+    },
+    {
+      "country_id": "ct_166",
+      "country_name": "Kazakhstan",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "413*531 px",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/kz.png"
+    },
+    {
+      "country_id": "ct_167",
+      "country_name": "Kenya",
+      "country_service_name": "",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 inches",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ke.png"
+    },
+    {
+      "country_id": "ct_168",
+      "country_name": "Korea",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/kr.png"
+    },
+    {
+      "country_id": "ct_168",
+      "country_name": "Korea",
+      "country_service_name": "Alian Residense",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/kr.png"
+    },
+    {
+      "country_id": "ct_169",
+      "country_name": "Kuwait",
+      "country_service_name": "",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/kw.png"
+    },
+    {
+      "country_id": "ct_170",
+      "country_name": "Kyrgyzstan",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/kg.png"
+    },
+    {
+      "country_id": "ct_171",
+      "country_name": "Laos",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/la.png"
+    },
+    {
+      "country_id": "ct_172",
+      "country_name": "Lebanon",
+      "country_service_name": "Alian Residense",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/lb.png"
+    },
+    {
+      "country_id": "ct_173",
+      "country_name": "Lesotho",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 in",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ls.png"
+    },
+    {
+      "country_id": "ct_174",
+      "country_name": "Liberia",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/lr.png"
+    },
+    {
+      "country_id": "ct_175",
+      "country_name": "Lithuania",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/lt.png"
+    },
+    {
+      "country_id": "ct_176",
+      "country_name": "Macau",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/mo.png"
+    },
+    {
+      "country_id": "ct_177",
+      "country_name": "Madagascar",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 in",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mg.png"
+    },
+    {
+      "country_id": "ct_177",
+      "country_name": "Madagascar",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mg.png"
+    },
+    {
+      "country_id": "ct_178",
+      "country_name": "Malaysia",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*50 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/my.png"
+    },
+    {
+      "country_id": "ct_178",
+      "country_name": "Malaysia",
+      "country_service_name": "Education Malaysia Online",
+      "country_dimension_mm": "217*280 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/my.png"
+    },
+    {
+      "country_id": "ct_179",
+      "country_name": "Maldives",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mv.png"
+    },
+    {
+      "country_id": "ct_180",
+      "country_name": "Mauritius",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mu.png"
+    },
+    {
+      "country_id": "ct_181",
+      "country_name": "Mexico",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mx.png"
+    },
+    {
+      "country_id": "ct_181",
+      "country_name": "Mexico",
+      "country_service_name": "Child Passport",
+      "country_dimension_mm": "25*30 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mx.png"
+    },
+    {
+      "country_id": "ct_182",
+      "country_name": "Mongolia",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mn.png"
+    },
+    {
+      "country_id": "ct_182",
+      "country_name": "Mongolia",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mn.png"
+    },
+    {
+      "country_id": "ct_183",
+      "country_name": "Morocco",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ma.png"
+    },
+    {
+      "country_id": "ct_184",
+      "country_name": "Myanmar(Burma)",
+      "country_service_name": "Permant Residence",
+      "country_dimension_mm": "1.5*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mm.png"
+    },
+    {
+      "country_id": "ct_184",
+      "country_name": "Myanmar(Burma)",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "38*46 mm",
+      "country_dimension_cm": "450*543 px",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/mm.png"
+    },
+    {
+      "country_id": "ct_185",
+      "country_name": "Namibia",
+      "country_service_name": "Passport, Visa",
+      "country_dimension_mm": "35*52 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/na.png"
+    },
+    {
+      "country_id": "ct_186",
+      "country_name": "Nepal",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "1.5*1.5 inch",
+      "country_dimension_cm": "450*450 px",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/np.png"
+    },
+    {
+      "country_id": "ct_186",
+      "country_name": "Nepal",
+      "country_service_name": "Machine Readable Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/np.png"
+    },
+    {
+      "country_id": "ct_187",
+      "country_name": "Netharlands",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/nl.png"
+    },
+    {
+      "country_id": "ct_188",
+      "country_name": "New Zealand",
+      "country_service_name": "Online e-Visa, Passport",
+      "country_dimension_mm": "3*4in",
+      "country_dimension_cm": "(At least 900*1200)",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/nz.png"
+    },
+    {
+      "country_id": "ct_188",
+      "country_name": "New Zealand",
+      "country_service_name": "Offline Visa, Passport",
+      "country_dimension_mm": "35*45mm for Printing",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/nz.png"
+    },
+    {
+      "country_id": "ct_189",
+      "country_name": "Nigeria",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ng.png"
+    },
+    {
+      "country_id": "ct_190",
+      "country_name": "Norway",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/no.png"
+    },
+    {
+      "country_id": "ct_191",
+      "country_name": "Oman",
+      "country_service_name": "Online e-Visa, Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "Sky Blue",
+      "country_flag": "https://flagcdn.com/96x72/om.png"
+    },
+    {
+      "country_id": "ct_192",
+      "country_name": "Pakistan",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/pk.png"
+    },
+    {
+      "country_id": "ct_193",
+      "country_name": "Palestine",
+      "country_service_name": "ID, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Sky Blue",
+      "country_flag": "https://flagcdn.com/96x72/ps.png"
+    },
+    {
+      "country_id": "ct_193",
+      "country_name": "Palestine",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ps.png"
+    },
+    {
+      "country_id": "ct_194",
+      "country_name": "Panama",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/pa.png"
+    },
+    {
+      "country_id": "ct_195",
+      "country_name": "Papua New Guinea",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/pg.png"
+    },
+    {
+      "country_id": "ct_196",
+      "country_name": "Peru",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/pe.png"
+    },
+    {
+      "country_id": "ct_197",
+      "country_name": "Philippines",
+      "country_service_name": "Machine Readable Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ph.png"
+    },
+    {
+      "country_id": "ct_197",
+      "country_name": "Philippines",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ph.png"
+    },
+    {
+      "country_id": "ct_198",
+      "country_name": "Poland",
+      "country_service_name": "Online ID, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "492*633 px",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/pl.png"
+    },
+    {
+      "country_id": "ct_199",
+      "country_name": "Portugal",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/pt.png"
+    },
+    {
+      "country_id": "ct_200",
+      "country_name": "Qatar",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/qa.png"
+    },
+    {
+      "country_id": "ct_201",
+      "country_name": "Romania",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ro.png"
+    },
+    {
+      "country_id": "ct_201",
+      "country_name": "Romania",
+      "country_service_name": "ID, Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ro.png"
+    },
+    {
+      "country_id": "ct_202",
+      "country_name": "Russia",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ru.png"
+    },
+    {
+      "country_id": "ct_203",
+      "country_name": "Samoa",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ws.png"
+    },
+    {
+      "country_id": "ct_204",
+      "country_name": "Sierra Leone",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/sl.png"
+    },
+    {
+      "country_id": "ct_205",
+      "country_name": "Singapore",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "400*514px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/sg.png"
+    },
+    {
+      "country_id": "ct_206",
+      "country_name": "Saudi Arabia",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/sa.png"
+    },
+    {
+      "country_id": "ct_207",
+      "country_name": "Slovakia",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45mm for Printing",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/si.png"
+    },
+    {
+      "country_id": "ct_208",
+      "country_name": "South Africa",
+      "country_service_name": "Visa, passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/za.png"
+    },
+    {
+      "country_id": "ct_209",
+      "country_name": "Spain",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/es.png"
+    },
+    {
+      "country_id": "ct_210",
+      "country_name": "Sri Lanka",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/lk.png"
+    },
+    {
+      "country_id": "ct_211",
+      "country_name": "Sudan",
+      "country_service_name": "",
+      "country_dimension_mm": "40*50mm",
+      "country_dimension_cm": "4*5 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/sd.png"
+    },
+    {
+      "country_id": "ct_212",
+      "country_name": "Sweden",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/se.png"
+    },
+    {
+      "country_id": "ct_213",
+      "country_name": "Swizerland",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "Light Grey",
+      "country_flag": "https://flagcdn.com/96x72/ch.png"
+    },
+    {
+      "country_id": "ct_214",
+      "country_name": "Syria",
+      "country_service_name": "",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/sy.png"
+    },
+    {
+      "country_id": "ct_215",
+      "country_name": "Taiwan",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tw.png"
+    },
+    {
+      "country_id": "ct_215",
+      "country_name": "Taiwan",
+      "country_service_name": "ID Card",
+      "country_dimension_mm": "50*50 mm",
+      "country_dimension_cm": "2*2 inches",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tw.png"
+    },
+    {
+      "country_id": "ct_215",
+      "country_name": "Taiwan",
+      "country_service_name": "ID Card",
+      "country_dimension_mm": "25*50 mm",
+      "country_dimension_cm": "2.5*3 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tw.png"
+    },
+    {
+      "country_id": "ct_216",
+      "country_name": "Tanzania",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tz.png"
+    },
+    {
+      "country_id": "ct_217",
+      "country_name": "Thailand",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "132*170 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/th.png"
+    },
+    {
+      "country_id": "ct_217",
+      "country_name": "Thailand",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/th.png"
+    },
+    {
+      "country_id": "ct_218",
+      "country_name": "Trinidad and Tobago",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "43*53 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tt.png"
+    },
+    {
+      "country_id": "ct_219",
+      "country_name": "Tunisia",
+      "country_service_name": "",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tn.png"
+    },
+    {
+      "country_id": "ct_220",
+      "country_name": "Turkey",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "50*60 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tr.png"
+    },
+    {
+      "country_id": "ct_220",
+      "country_name": "Turkey",
+      "country_service_name": "Passolig Card",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/tr.png"
+    },
+    {
+      "country_id": "ct_221",
+      "country_name": "Uganda",
+      "country_service_name": "",
+      "country_dimension_mm": "43*53 mm",
+      "country_dimension_cm": "2*2 inches",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ug.png"
+    },
+    {
+      "country_id": "ct_222",
+      "country_name": "Ukraine",
+      "country_service_name": "Passport, Licence",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ua.png"
+    },
+    {
+      "country_id": "ct_222",
+      "country_name": "Ukraine",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "450*600 px",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ua.png"
+    },
+    {
+      "country_id": "ct_222",
+      "country_name": "Ukraine",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "30*40 mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ua.png"
+    },
+    {
+      "country_id": "ct_223",
+      "country_name": "UAE (Dubai)",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "43*55 mm",
+      "country_dimension_cm": "300*369px",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ae.png"
+    },
+    {
+      "country_id": "ct_223",
+      "country_name": "UAE (Dubai)",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "43*55 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ae.png"
+    },
+    {
+      "country_id": "ct_223",
+      "country_name": "UAE (Dubai)",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ae.png"
+    },
+    {
+      "country_id": "ct_223",
+      "country_name": "UAE (Dubai)",
+      "country_service_name": "ID Card",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6 cm",
+      "country_bg_color": "Sky Blue",
+      "country_flag": "https://flagcdn.com/96x72/ae.png"
+    },
+    {
+      "country_id": "ct_224",
+      "country_name": "United States - USA",
+      "country_service_name": "",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/us.png"
+    },
+    {
+      "country_id": "ct_225",
+      "country_name": "Uruguay",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/uy.png"
+    },
+    {
+      "country_id": "ct_226",
+      "country_name": "Uzbekistan",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/uz.png"
+    },
+    {
+      "country_id": "ct_227",
+      "country_name": "Venezuela",
+      "country_service_name": "Passport",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ve.png"
+    },
+    {
+      "country_id": "ct_228",
+      "country_name": "Vietnam",
+      "country_service_name": "Online e-Visa",
+      "country_dimension_mm": "4*6 cm",
+      "country_dimension_cm": "472*708 px",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/vn.png"
+    },
+    {
+      "country_id": "ct_228",
+      "country_name": "Vietnam",
+      "country_service_name": "Visa",
+      "country_dimension_mm": "2*2 in",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/vn.png"
+    },
+    {
+      "country_id": "ct_228",
+      "country_name": "Vietnam",
+      "country_service_name": "ID Card",
+      "country_dimension_mm": "30*40mm",
+      "country_dimension_cm": "3*4 cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/vn.png"
+    },
+    {
+      "country_id": "ct_229",
+      "country_name": "Yemen",
+      "country_service_name": "",
+      "country_dimension_mm": "40*60 mm",
+      "country_dimension_cm": "4*6cm",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/ye.png"
+    },
+    {
+      "country_id": "ct_230",
+      "country_name": "Zambia",
+      "country_service_name": "38*51 mm",
+      "country_dimension_mm": "38*51 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/zm.png"
+    },
+    {
+      "country_id": "ct_230",
+      "country_name": "Zambia",
+      "country_service_name": "51*64 mm",
+      "country_dimension_mm": "51*64 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/zm.png"
+    },
+    {
+      "country_id": "ct_231",
+      "country_name": "Zimbabwe",
+      "country_service_name": "Visa, Passport",
+      "country_dimension_mm": "35*45 mm",
+      "country_dimension_cm": "",
+      "country_bg_color": "White",
+      "country_flag": "https://flagcdn.com/96x72/zw.png"
+    }
+  ]
+}

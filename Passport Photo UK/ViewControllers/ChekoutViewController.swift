@@ -11,6 +11,8 @@ import Alamofire
 import RealmSwift
 import PassKit
 import Stripe
+import Firebase
+import FirebaseAnalytics
 class ShippingCell:UITableViewCell {
     @IBOutlet var lblTitle:UILabel!
     @IBOutlet var txtShippingType:UITextField!
@@ -50,6 +52,9 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     var arrContactList:Results<AddContact>!
     var personImage = [Data]()
     
+    var transactionID = ""
+    var paymentSheetFlowController:PaymentSheet.FlowController!
+    
     var trayingTimes = 0
     //    var applePayButton:PKPaymentButton!
     @IBOutlet var applePayView:UIView!
@@ -58,6 +63,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
     //var indicator:MaterialLoadingIndicator!
     @IBOutlet var cartButton:UIButton!
+    let themeViewController = ThemeViewController()
     
     
     override func viewDidLoad() {
@@ -122,7 +128,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             }else if self.strCity.isEmpty{
                 return "Please enter city / town"
             }else if self.strCountry.isEmpty{
-                return "Please enter country"
+                return "Please enter county"
             }else if self.strPostal.isEmpty{
                 return "Please enter post code"
             }
@@ -166,7 +172,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         }
     }
     
-    let themeViewController = ThemeViewController()
+    
     
     @IBAction func tappedOnAddCard(_ sender:UIButton) {
         let error = self.validateView()
@@ -176,7 +182,9 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             alert.addAction(btnOK)
             self.present(alert, animated: true, completion: nil)
         }else {
-            let theme = themeViewController.theme.stpTheme
+            getStripeToken()
+//            self.callSendMailAPI("test in ios")
+           /*/ let theme = themeViewController.theme.stpTheme
             //            let viewController = CardFieldViewController()
             let viewController = CardFieldViewController.instantiate(fromAppStoryboard: .Main)
             viewController.theme = theme
@@ -185,7 +193,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             viewController.delegate = self
             let navigationController = UINavigationController(rootViewController: viewController)
             //            navigationController.navigationBar.stp_theme = theme
-            present(navigationController, animated: true, completion: nil)
+            present(navigationController, animated: true, completion: nil)*/
         }
         
     }
@@ -288,7 +296,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
                 cell.lblTitle.text = "City / Town"
                 cell.txtField.tag = 777
             }else if indexPath.row == 7 {
-                cell.lblTitle.text = "Country"
+                cell.lblTitle.text = "County"
                 cell.txtField.tag = 888
             }else if indexPath.row == 8 {
                 cell.lblTitle.text = "Post code"
@@ -457,9 +465,7 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
                        "Content-Type": "multipart/form-data", "Connection":"keep-alive"]
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let strURL = "http://passportphotocodeuk.com/backend/api/orders/sendMail"
-        //let strURL = "https://www.passportphotocodeuk.com/ppuk/api/orders/sendMail"
-        //        let strURL = "https://passportphotouk.co.uk/ppuk/api/orders/sendMail"
+        let strURL = "https://passportphotocodeuk.com/backend/api/orders/sendMail"
         var parameters = [String : String]()
         parameters["paypal_transaction_id"] = paymentId
         parameters["transaction_date"] = dateFormatter.string(from: Date())
@@ -473,7 +479,20 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         parameters["cst_shipping_method"] = strShippingMethod
         parameters["cst_shipping_amount"] = "\(shippingCharge)"
         parameters["cst_shipping_type"] = "\(selectedShipping)"
-        parameters["app_version"] = "2.0"
+        parameters["app_version"] = "3.0"
+        parameters["selected_service"] = "Passport"
+        
+        if !CropUser.shared.isCountryUK && !CropUser.shared.countryInfo.isEmpty {
+            parameters["country"] = CropUser.shared.countryInfo["country_name"] as? String
+            parameters["background_color"] = CropUser.shared.countryInfo["country_bg_color"] as? String
+            parameters["dimensions"] = CropUser.shared.countryInfo["country_dimension_mm"] as? String == "" ? CropUser.shared.countryInfo["country_dimension_cm"] as? String : CropUser.shared.countryInfo["country_dimension_mm"] as? String
+            parameters["photo_kind"] = CropUser.shared.countryInfo["country_service_name"] as? String
+        }else{
+            parameters["country"] = ""
+            parameters["background_color"] = ""
+            parameters["dimension"] = ""
+            parameters["photo_kind"] = ""
+        }
         
         print("Parameter:",parameters)
         print("Header:",headers)
@@ -482,8 +501,6 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
         upload(multipartFormData: { (multipartFormData) in
             
             for imageData in self.personImage {
-                //let image = UIImage(data: photo)
-                //let imageData:Data = UIImageJPEGRepresentation(image!, 1.0)!
                 multipartFormData.append(imageData, withName: "cst_image[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                 let bcf = ByteCountFormatter()
                 bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
@@ -494,14 +511,8 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
             
             for (key, value) in parameters {
                 multipartFormData.append((value.data(using: String.Encoding.utf8, allowLossyConversion: false))!, withName: key)
-                
-                //multipartFormData.append(value.data(using: .utf8)!, withName: key)
             }
-            
         }, to: strURL, method: .post, headers: headers) { (encodingResult) in
-            
-            
-            
             switch encodingResult {
             case .success(let upload, _, _):
                 
@@ -560,6 +571,96 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
     }
     
     
+    func getStripeToken() {
+        
+        let totalAmount = round((price + shippingCharge) * 100)
+        
+        var appVersion = ""
+        if let info = Bundle.main.infoDictionary {
+            appVersion = info["CFBundleShortVersionString"] as? String ?? "Unknown"
+        }
+        
+        
+        let user = "ppcukadmin"
+        let password = "Admin123#"
+        let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
+        let headers = ["Authorization": "Basic \(base64Credentials)",
+                       "Content-Type": "multipart/form-data", "Connection":"keep-alive"]
+        
+        var parameters = [String : String]()
+        parameters["currency"] = "GBP"
+        parameters["description"] = "\(self.firstName) \(self.lastName) - PPCUK - IOS - Card - \(appVersion)"
+        parameters["amount"] = "\(Int(totalAmount))"
+        
+        appDelegate.showHud()
+        
+        upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append((value.data(using: String.Encoding.utf8, allowLossyConversion: false))!, withName: key)
+            }
+            
+        }, to: "https://passportphotocodeuk.com/backend/api/orders/stripay", method: .post, headers: headers) { (encodingResult) in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                
+                upload.validate(statusCode: 200..<600)
+                
+                upload.responseJSON { response in
+                    appDelegate.hideHud()
+                    if let dictResult:[String:Any] = response.result.value as! [String : Any]? {
+                        print(dictResult)
+                        if let data = dictResult["data"] as? [String : Any]{
+                            self.openCardView(clientSecret: data["client_secret"] as! String)
+                            self.transactionID = data["id"] as! String
+                        }
+                    }
+                }
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        }
+        
+    }
+    
+    func openCardView(clientSecret: String){
+        STPAPIClient.shared.publishableKey = "pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ"
+        //STPAPIClient.shared.publishableKey = "pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu"
+        var configuration = PaymentSheet.Configuration()
+        configuration.merchantDisplayName = "Passport Photo Code UK"
+        
+        PaymentSheet.FlowController.create(paymentIntentClientSecret: clientSecret, configuration: configuration) { [weak self] result in
+          switch result {
+          case .failure(let error):
+            print(error)
+          case .success(let paymentSheetFlowController):
+            self?.paymentSheetFlowController = paymentSheetFlowController
+              self?.presentCardView()
+            // Update your UI using paymentSheetFlowController.paymentOption
+          }
+        }
+    }
+    
+    func presentCardView(){
+        paymentSheetFlowController.presentPaymentOptions(from: self) {
+            if self.paymentSheetFlowController.paymentOption != nil{
+                self.paymentSheetFlowController.confirm(from: self) { paymentResult in
+                  
+                  switch paymentResult {
+                  case .completed:
+                      self.callSendMailAPI(self.transactionID)
+                    print("Payment complete!")
+                  case .canceled:
+                    print("Canceled!")
+                  case .failed(let error):
+                    print(error)
+                  }
+                }
+            }
+        }
+    }
+    
+    
     
     /*
      // MARK: - Navigation
@@ -577,11 +678,10 @@ class ChekoutViewController: BaseViewController, UITableViewDataSource, UITableV
 extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
     
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
-        Stripe.setDefaultPublishableKey("pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ")
-        //        Stripe.setDefaultPublishableKey("pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu")
+        STPAPIClient.shared.publishableKey  = "pk_live_51HywFbJmxHQ890tSYPm6kjivC3lMNpDPl3xyIeTaktngN1ChqT8NjcEED37CrsXAfq14OFhgkvEokjONXUOy4PEx00LJ2fqLZZ"
+        //STPAPIClient.shared.publishableKey = "pk_test_51HywFbJmxHQ890tSxAwz9N7Jsm6GV8grLJ7aitkgZ2XAol4MPEl9GqZOAPEK7pVFt9EJF2XNEWbbG8KwXxV4aEmk00sAILTMfu"
         
-        // 3
-        //        STPAPIClient.shared.createToken(with: <#T##PKPayment#>, completion: <#T##STPTokenCompletionBlock##STPTokenCompletionBlock##(STPToken?, Error?) -> Void#>)
+        
         STPAPIClient.shared.createToken(with: payment) {
             (token, error) -> Void in
             
@@ -590,24 +690,12 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
                 return
             }
             
-            //            self.callSendMailAPI(token?.tokenId ?? "")
             
-            // 4
-            //            let shippingAddress = self.createShippingAddressFromRef(address: payment.shippingAddress)
-            
-            // 5
-            let url = "http://passportphotocodeuk.com/backend/api/Stripepay/Pay"
+            let url = "https://passportphotocodeuk.com/backend/api/Stripepay/Pay"
             let user = "ppcukadmin"
             let password = "Admin123#"
             let credentialData = "\(user):\(password)".data(using: String.Encoding.utf8)!
             let base64Credentials = credentialData.base64EncodedString(options: [])
-            
-            //            let request = NSMutableURLRequest(url: url! as URL)
-            //            request.httpMethod = "POST"
-            //            request.setValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
-            //            request.setValue("application/json", forHTTPHeaderField: "Accept")
-            //            request.setValue("Basic \(base64Credentials)", forHTTPHeaderField: "Authorization")
-            //            request.setValue("keep-alive", forHTTPHeaderField: "Connection")
             
             let headers = ["Authorization": "Basic \(base64Credentials)","Accept":"application/json",
                            "Content-Type": "multipart/form-data", "Connection":"keep-alive"]
@@ -615,24 +703,17 @@ extension ChekoutViewController : PKPaymentAuthorizationViewControllerDelegate {
             let parameters = ["token": token?.tokenId ?? "",
                               "amount": "\(Int(round(self.total * 100)))",
                               "currency":"GBP",
-                              "description": "\(self.firstName) PPCUK - IOS - ApplePay",
+                              "description": "\(self.firstName) - PPCUK - IOS - ApplePay",
             ] as [String : String]
             
             print("BODY: \(parameters)")
             print("Header: \(headers)")
-            
-            //            Alamofire.request(url, method: .post, parameters: body, headers: headers).responseJSON { (response) in
-            //                let str = String(decoding: response.data!, as: UTF8.self)
-            //                print(str);
-            //            }
             
             upload(multipartFormData: { (multipartFormData) in
                 
                 
                 for (key, value) in parameters {
                     multipartFormData.append((value.data(using: String.Encoding.utf8, allowLossyConversion: false))!, withName: key)
-                    
-                    //multipartFormData.append(value.data(using: .utf8)!, withName: key)
                 }
                 
             }, to: url, method: .post, headers: headers) { (encodingResult) in

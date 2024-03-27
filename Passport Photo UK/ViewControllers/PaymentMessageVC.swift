@@ -39,7 +39,7 @@ class PaymentMessageVC: BaseViewController {
     }
     
     @IBAction func onBtnOkClick(_ sender: UIButton) {
-        for viewController in (self.navigationController?.viewControllers)! {
+        /*for viewController in (self.navigationController?.viewControllers)! {
             if viewController is TakePhotoViewController {
                 isBack = true;
                 self.navigationController?.popToViewController(viewController, animated: true)
@@ -50,6 +50,11 @@ class PaymentMessageVC: BaseViewController {
                 if viewController is GoodAndBadViewController {
                     self.navigationController?.popToViewController(viewController, animated: true)
                 }
+            }
+        }*/
+        for viewController in (self.navigationController?.viewControllers)! {
+            if viewController is SelectCountryVC {
+                self.navigationController?.popToViewController(viewController, animated: true)
             }
         }
     }

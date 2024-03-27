@@ -9,7 +9,7 @@
 import UIKit
 import ContactsUI
 import RealmSwift
-
+import FirebaseRemoteConfig
 import Foundation
 
 class AddContact: Object {
@@ -38,9 +38,11 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet var btnEmailOption: UIButton!
     @IBOutlet var btnHomeDeliveryOption: UIButton!
     @IBOutlet var btnBothOption: UIButton!
+    @IBOutlet var btnInfo: UIButton!
     
     @IBOutlet var viewPhotocode: UIView!
     @IBOutlet var lblPhotoCodeSummery: UILabel!
+    @IBOutlet var lblPhotoCodeSummery2: UILabel!
     @IBOutlet var viewPrintedPhoto: UIView!
     @IBOutlet var lblPhotoPrintSummery: UILabel!
     @IBOutlet var viewBoth: UIView!
@@ -59,16 +61,76 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
     var arrContactList:Results<AddContact>!
     var subTotal = 0.0
     
+    var remoteConfig:RemoteConfig!
+    var digitalPhotoAmount = 0.0
+    var printedPhotoAmount = 0.0
+    var bothPhotoAmount = 0.0
+    var standardDelivery:Float = 0.0
+    var specialDelivery:Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if CropUser.shared.isCountryUK {
+            btnInfo.isHidden = false
+        }else {
+            btnInfo.isHidden = true
+        }
         self.title = "Select an Option"
         
         
         self.addNavBackBtn(withSelector: #selector(goBack))
         
         self.getAllContactFile()
+        
+        if CropUser.shared.isCountryUK {
             
+        }else {
+            btnEmailOption.setTitle("  Digital Photo", for: .normal)
+            btnBothOption.setTitle("  Digital Photo + 4 Printed Photos", for: .normal)
+        }
+            
+        getRemoteConfigData()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    func getRemoteConfigData() {
+        remoteConfig = RemoteConfig.remoteConfig()
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 0
+        remoteConfig.configSettings = settings
+        
+        remoteConfig.fetch { (status, error) -> Void in
+          if status == .success {
+            print("Config fetched!")
+              print(self.remoteConfig["charge_both_option"].stringValue ?? "")
+              print(self.remoteConfig["charge_delivery_free"].stringValue ?? "")
+              print(self.remoteConfig["charge_four_printed_photo"].stringValue ?? "")
+              print(self.remoteConfig["charge_next_day_delivery"].stringValue ?? "")
+              print(self.remoteConfig["charge_photo_code_only"].stringValue ?? "")
+              print(self.remoteConfig["charge_recorded_delivery"].stringValue ?? "")
+              print(self.remoteConfig["charge_standard_delivery"].stringValue ?? "")
+              print(self.remoteConfig["google_pay_status"].stringValue ?? "")
+              print(self.remoteConfig["stripe_final_status"].stringValue ?? "")
+              
+              self.digitalPhotoAmount = Double(self.remoteConfig["charge_photo_code_only"].stringValue ?? "0.00") ?? 0.0
+              self.printedPhotoAmount = Double(self.remoteConfig["charge_four_printed_photo"].stringValue ?? "0.00") ?? 0.0
+              self.bothPhotoAmount = Double(self.remoteConfig["charge_both_option"].stringValue ?? "0.00") ?? 0.0
+              self.standardDelivery = Float(self.remoteConfig["charge_standard_delivery"].stringValue ?? "0.00") ?? 0.0
+              self.specialDelivery = Float(self.remoteConfig["charge_next_day_delivery"].stringValue ?? "0.00") ?? 0.0
+              
+            self.remoteConfig.activate { changed, error in
+                print("remoteConfig.activate")
+                print(changed)
+            }
+          } else {
+            print("Config not fetched")
+            print("Error: \(error?.localizedDescription ?? "No error available.")")
+          }
+//          self.displayWelcome()
+        }
     }
     
     func getAllContactFile() {
@@ -85,8 +147,9 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
     @IBAction func tappedOnRadio(_ sender:UIButton) {
         subTotal = 0.0;
         if sender == btnEmailOption {
-            subTotal = 4.99 * Double(arrContactList.count)
+            subTotal = self.digitalPhotoAmount * Double(arrContactList.count)
             lblPhotoCodeSummery.textColor = UIColor.white
+            lblPhotoCodeSummery2.textColor = UIColor.white
             lblPhotoPrintSummery.textColor = UIColor.darkGray
             viewPhotocode.backgroundColor = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
             viewPrintedPhoto.backgroundColor = UIColor.white
@@ -96,21 +159,23 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             btnHomeDeliveryOption.isSelected = false
         }else if sender == btnHomeDeliveryOption {
             lblPhotoCodeSummery.textColor = UIColor.darkGray
+            lblPhotoCodeSummery2.textColor = UIColor.darkGray
             lblPhotoPrintSummery.textColor = UIColor.white
             viewPhotocode.backgroundColor = UIColor.white
             viewPrintedPhoto.backgroundColor = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
             viewBoth.backgroundColor = UIColor.white
-            subTotal = 4.99 * Double(arrContactList.count);
+            subTotal = self.printedPhotoAmount * Double(arrContactList.count);
             btnBothOption.isSelected = false
             btnEmailOption.isSelected = false
             btnHomeDeliveryOption.isSelected = true
         }else if sender == btnBothOption {
             lblPhotoCodeSummery.textColor = UIColor.darkGray
+            lblPhotoCodeSummery2.textColor = UIColor.darkGray
             lblPhotoPrintSummery.textColor = UIColor.darkGray
             viewPhotocode.backgroundColor = UIColor.white
             viewPrintedPhoto.backgroundColor = UIColor.white
             viewBoth.backgroundColor = UIColor(red: 38.0/255.0, green: 51.0/255.0, blue: 132.0/255.0, alpha: 1.0)
-            subTotal = 9.98 * Double(arrContactList.count);
+            subTotal = self.bothPhotoAmount * Double(arrContactList.count);
             //subTotal = subTotal + 4.99
             btnBothOption.isSelected = true
             btnEmailOption.isSelected = false
@@ -152,20 +217,20 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
                 self.present(alert, animated: true, completion: nil)
             }else {
                 if (shipMethod == "email"){
-                    let alert = UIAlertController (title: "Code will be delivered within 24 hours (if your photo meets the rules).", message: "", preferredStyle: .alert)
-                    let btnProceed = UIAlertAction(title: "Proceed", style: .default, handler: { (alertAction) in
+//                    let alert = UIAlertController (title: "Code will be delivered within 24 hours (if your photo meets the rules).", message: "", preferredStyle: .alert)
+//                    let btnProceed = UIAlertAction(title: "Proceed", style: .default, handler: { (alertAction) in
                         let chekoutVC = ChekoutViewController.instantiate(fromAppStoryboard: .Main)
                         chekoutVC.strShippingMethod = "email"
                         chekoutVC.price = Float(self.subTotal);
                         chekoutVC.selectedShipping = "0";
                         chekoutVC.shippingCharge = 0.00;
                         self.navigationController?.pushViewController(chekoutVC, animated: true)
-                    })
-                    alert.addAction(btnProceed)
-                    
-                    let btnCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                    alert.addAction(btnCancel)
-                    self.present(alert, animated: true, completion: nil)
+//                    })
+//                    alert.addAction(btnProceed)
+//                    
+//                    let btnCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//                    alert.addAction(btnCancel)
+//                    self.present(alert, animated: true, completion: nil)
                 }else {
                     let deliveryVC = DeliveryOptionVC.instantiate(fromAppStoryboard: .Main)
                     deliveryVC.strShippingMethod = shipMethod
@@ -212,10 +277,8 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             cell.lblName.text = "" //dbContact.FullName
             if dbContact.imageData.count > 5 {
                 cell.imageFile.image = UIImage(data: dbContact.imageData)
-                //let length = (collectionView.bounds.size.width - marginInset * 2 - interimMargin * CGFloat(itemsPerRow - 1)) / CGFloat(itemsPerRow)
                 cell.imageFile.layer.cornerRadius = 10.0
             }else {
-//                cell.imageFile.setImage(string: dbContact.FullName, color: UIColor.red, circular: true, stroke: false, textAttributes: nil)
                 let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.size.width, height: cell.frame.size.width))
                 imageView.setImage(string: dbContact.FullName, color: UIColor.lightGray, circular: true, stroke: false, textAttributes: nil)
                 cell.imageFile.image = imageView.image
@@ -253,11 +316,11 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
             self.getAllContactFile()
             //self.subTotal = 4.99 * Double(self.arrContactList.count);
             if self.btnEmailOption.isSelected {
-                self.subTotal = 4.99 * Double(self.arrContactList.count)
+                self.subTotal = self.digitalPhotoAmount * Double(self.arrContactList.count)
             }else if self.btnHomeDeliveryOption.isSelected {
-                self.subTotal = 4.99 * Double(self.arrContactList.count);
+                self.subTotal = self.printedPhotoAmount * Double(self.arrContactList.count);
             }else if self.btnBothOption.isSelected {
-                self.subTotal = 9.98 * Double(self.arrContactList.count);
+                self.subTotal = self.bothPhotoAmount * Double(self.arrContactList.count);
             }
             self.lblSubTotal.text = "£\(self.subTotal)"
         }))
@@ -280,17 +343,19 @@ class MultiplePersonVC: BaseViewController, UICollectionViewDelegate, UICollecti
         }else {
             var isRedirect = false;
             for viewController in self.navigationController!.viewControllers {
-                if viewController is TakePhotoViewController {
+                if viewController is PreviewViewController {
                     isRedirect = true
                     CropUser.shared.isCaptureMultiplePic = true
                     self.navigationController?.popToViewController(viewController, animated: true);
+                    NotificationCenter.default.post(name:NSNotification.Name("removeImage"),object: nil)
                 }
             }
             
             if !isRedirect {
                 CropUser.shared.isCaptureMultiplePic = true
-                let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)
+                let cropVC = PreviewViewController.instantiate(fromAppStoryboard: .Main)
                 self.navigationController?.pushViewController(cropVC, animated: true);
+                NotificationCenter.default.post(name:NSNotification.Name("removeImage"),object: nil)
             }
             
 //            let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)

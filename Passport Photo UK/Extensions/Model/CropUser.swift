@@ -19,4 +19,6 @@ class CropUser {
     var countryName : String!
     var isRedictToCodeGen : Bool = false
     var isCaptureMultiplePic : Bool = false
+    var isCountryUK : Bool = false
+    var countryInfo : Dictionary<String,Any> = [:]
 }

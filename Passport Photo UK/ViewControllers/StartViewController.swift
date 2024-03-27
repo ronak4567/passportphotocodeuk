@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import FirebaseRemoteConfig
 class StartViewController: BaseViewController {
+    
+    var remoteConfig:RemoteConfig!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.setUpPaypal()
-
+        getRemoteConfigData()
     }
     
 //    var environment:String = PayPalEnvironmentNoNetwork {
@@ -29,6 +31,45 @@ class StartViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func getRemoteConfigData() {
+        remoteConfig = RemoteConfig.remoteConfig()
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 0
+        remoteConfig.configSettings = settings
+        
+        remoteConfig.fetch { (status, error) -> Void in
+          if status == .success {
+            print("Config fetched!")
+              print(self.remoteConfig["charge_both_option"].stringValue ?? "")
+              print(self.remoteConfig["charge_delivery_free"].stringValue ?? "")
+              print(self.remoteConfig["charge_four_printed_photo"].stringValue ?? "")
+              print(self.remoteConfig["charge_next_day_delivery"].stringValue ?? "")
+              print(self.remoteConfig["charge_photo_code_only"].stringValue ?? "")
+              print(self.remoteConfig["charge_recorded_delivery"].stringValue ?? "")
+              print(self.remoteConfig["charge_standard_delivery"].stringValue ?? "")
+              print(self.remoteConfig["google_pay_status"].stringValue ?? "")
+              print(self.remoteConfig["stripe_final_status"].stringValue ?? "")
+              
+//              self.digitalPhotoAmount = Double(self.remoteConfig["charge_digital_photo"].stringValue ?? "0.00") ?? 0.0
+//              self.printedPhotoAmount = Double(self.remoteConfig["charge_printed_photo"].stringValue ?? "0.00") ?? 0.0
+//              self.bothPhotoAmount = Double(self.remoteConfig["charge_both_photo"].stringValue ?? "0.00") ?? 0.0
+//              self.chargeDelivery = Float(self.remoteConfig["charge_delivery"].stringValue ?? "0.00") ?? 0.0
+            self.remoteConfig.activate { changed, error in
+                print("remoteConfig.activate")
+                print(changed)
+                print(error)
+            }
+          } else {
+            print("Config not fetched")
+            print("Error: \(error?.localizedDescription ?? "No error available.")")
+          }
+//          self.displayWelcome()
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

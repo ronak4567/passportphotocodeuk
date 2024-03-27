@@ -16,11 +16,14 @@ target 'Passport Photo UK' do
     pod 'RealmSwift'
     pod 'SVProgressHUD'
 #    pod 'Stripe/ApplePay'
+#    pod 'Stripe', '~> 22.8.2'
     pod 'Stripe'
     pod 'Firebase/Crashlytics'
 
     # Recommended: Add the Firebase pod for Google Analytics
     pod 'Firebase/Analytics'
+    pod 'SDWebImage', '~> 5.0'
+    pod 'Firebase/RemoteConfig'
 #    pod 'SendGrid'
   # Pods for Quick & Easy Photo ID
 

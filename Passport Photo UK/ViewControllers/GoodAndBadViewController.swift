@@ -72,12 +72,15 @@ class GoodAndBadViewController: BaseViewController {
             alert.addAction(btnCancel)
             self.present(alert, animated: true, completion: nil)
         }else {
-            let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)
+            /*let cropVC = TakePhotoViewController.instantiate(fromAppStoryboard: .Main)
             cropVC.selectedRatio = CropUser.shared.ratio
             cropVC.country = self.selectedCountry
             cropVC.selectedType = self.selectedSize
             cropVC.IDSize = self.IDSize
             cropVC.aspectHeightHead = self.aspectHeightHead
+            self.navigationController?.pushViewController(cropVC, animated: true);*/
+            
+            let cropVC = PreviewViewController.instantiate(fromAppStoryboard: .Main)
             self.navigationController?.pushViewController(cropVC, animated: true)
         }
         
